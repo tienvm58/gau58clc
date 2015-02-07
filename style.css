@@ -22,9 +22,10 @@ a{
     margin: 0px auto;
     margin-top: -1px;
 }
+
 .khungchinh>ul>li{
     float: left;
-    padding: 21px 74px;
+    padding: 21px 57px;
     position: relative;
     border-right: 1px dotted #fff;
     
@@ -32,6 +33,7 @@ a{
 .khung>ul>li:last-child:last-child{
     border-right: none;
 }
+
 .khungchinh>ul>li>ul{
     display: none;
     position: absolute;
@@ -48,6 +50,6 @@ a{
     transition: all 0.25s;
 }
 .khungchinh>ul>li>ul>li{
-    padding: 21px 74px;
+    padding: 21px 57px;
     border-bottom: 1px dotted #fff;
 }
