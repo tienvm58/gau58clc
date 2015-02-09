@@ -7,6 +7,13 @@ a{
     text-decoration: none;
     color: #fff;
 }
+
+body {
+	background-image: url(image/Background.png);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+
 .cover{
     width: 994px;
     height:333px;
@@ -14,6 +21,7 @@ a{
     margin-top: 0px auto;
     margin:  0px auto;
 }
+
 
 .khungchinh{
     width:994px; 
@@ -52,4 +60,37 @@ a{
 .khungchinh>ul>li>ul>li{
     padding: 21px 57px;
     border-bottom: 1px dotted #fff;
+}
+
+#content{
+    width: 994px;   
+    
+    margin: 0px auto;
+}
+
+.box_monan{
+    width: 200px;
+    height: 190px;
+    margin: 10px;
+    border: solid 1px;
+    float: left;
+    margin-left: 30px;
+
+}
+.box_monan img{
+    width: 180px;
+    height: 100px;
+    margin: 10px;
+}
+.tenmonan{
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.gia{
+    color: blue;
+    font-size: 14px;
+    text-align: center;
+
 }
