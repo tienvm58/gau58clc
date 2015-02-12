@@ -1,4 +1,5 @@
 
+
 *{margin : 0px; padding: 0px;}
 li{
     list-style: none;
@@ -11,7 +12,7 @@ a{
 body {
 	background-image: url(image/Background.png);
 	background-repeat: no-repeat;
-	background-attachment: scroll;
+	background-attachment: fixed;
 }
 
 .cover{
@@ -25,7 +26,7 @@ body {
 
 .khungchinh{
     width:994px; 
-    height: 61px;
+    height: 62px;
     background: #F8182A;
     margin: 0px auto;
     margin-top: -1px;
@@ -33,9 +34,8 @@ body {
 
 .khungchinh>ul>li{
     float: left;
-    padding: 21px 57px;
+    padding: 21px 61.9px;
     position: relative;
-    border-right: 1px dotted #fff;
     
 }
 .khung>ul>li:last-child:last-child{
@@ -48,7 +48,7 @@ body {
     background: #F8182A;
     top:60px;
     left:0px;
-    width:186px;
+    width:198px;
 }
 .khungchinh>ul>li:hover ul{ 
     display: block;
@@ -58,6 +58,5 @@ body {
     transition: all 0.25s;
 }
 .khungchinh>ul>li>ul>li{
-    padding: 21px 57px;
-    border-bottom: 1px dotted #fff;
+    padding: 21px 59px;
 }
