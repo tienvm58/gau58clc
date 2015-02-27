@@ -7,23 +7,9 @@
 	</head>
 		
 	<body>
-		<div class="cover"></div>
-    		<div class="khungchinh" >
-        		<ul>
-						<li><a href="Code.html">Home</a></li>
-            			<li><a href="Menu.php">Menu</a></li>
-            			<li><a href="#">Đặt hàng</a></li>
-						<li><a href="#">Quản lí</a>
-						<ul>
-							<li><a href="Add.php">Thêm Món</a></li>
-							<li><a href="#">Xóa</a></li>
-						</ul>
-            			<li><a href="#">Liên hệ</a></li>
-            			<li><a href="#">Góp ý</a></li>
-        		</ul>
-    
-		 </div>
+		
          <?php
+            include 'head.html';
             error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
         ?>
 	
@@ -99,31 +85,8 @@
 		</div>
 		</form>
 	
-	
-		 <br><br><br><br><br>
-		<div align = "center">
-		<table cellspacing = "20" border = "0">
-			<tr>
-				<div align = "center">
-				<table border = "1px" width = "994px" height = "100px" align = "center" cellspacing = "5px">
-					<tr>
-						<br><br><br>
-						<td><div align = "left"> 
-							<ul>
-								<li> <img src = "Image/footer.png " width = "100px" height = "100px"> </li>
-							</ul>
-						</div></td>
-						<td><div align = "center-leftright">
-							<ul>
-								<li> Địa chỉ: 144 Xuân Thủy, Cầu Giấy, Hà Nội </li>
-								<li> Điện thoại: 0912345678 </li>
-								<li> Facebook:<li>
-								<li> <a href = "Code.html">Về trang chủ</a></li>
-							</ul>
-						</div></td>
-						</tr>
-				</table>
-			</tr>
-		</table>	
+	<?php
+			include 'end.html';
+		?>
 	</body>
 </html>
