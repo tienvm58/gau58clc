@@ -1,0 +1,37 @@
+
+body {
+    font-family: helvetica;
+    font-size: 14px;
+}
+
+form div{
+   margin-bottom: 10px ;
+}
+label {  
+    font-weight: bold;
+    line-height: 23px;
+    float: left;  
+}
+form input#name{
+	margin-left: 19px;
+}
+form input#email{
+	margin-left: 27px;
+}
+#form {
+    width:  400px;
+    border: 1px solid #000;
+    background: #A8D4FF;
+	margin: 40px 120px;
+    padding: 10px 0px 0px 50px;
+}
+
+#jobs {
+    margin-left: 20px;
+}
+
+#button:hover {
+    color: #fff;
+    background: #5197FF;
+    cursor: pointer;
+}
