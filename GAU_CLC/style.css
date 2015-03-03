@@ -4,20 +4,20 @@
 li{
     list-style: none;
 }
+
 a{
     text-decoration: none;
     color: #fff;
 }
 
 body {
-	background-image: url(image/Background.png);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background: url(image/Background.png) no-repeat fixed;
+	font: 15px Arial;
 }
 
 .cover{
-    width: 994px;
-    height:333px;
+    width: 1014px;
+    height:335px;
     background: url(image/cover.png) no-repeat;
     margin-top: 0px auto;
     margin:  0px auto;
@@ -25,8 +25,8 @@ body {
 
 
 .khungchinh{
-    width:994px; 
-    height: 62px;
+    width:1014px; 
+    height: 61px;
     background: #F8182A;
     margin: 0px auto;
     margin-top: -1px;
@@ -34,7 +34,7 @@ body {
 
 .khungchinh>ul>li{
     float: left;
-    padding: 21px 61.9px;
+    padding: 21px 61.4px;
     position: relative;
     
 }
@@ -48,7 +48,7 @@ body {
     background: #F8182A;
     top:60px;
     left:0px;
-    width:198px;
+    width:171px;
 }
 .khungchinh>ul>li:hover ul{ 
     display: block;
@@ -58,5 +58,5 @@ body {
     transition: all 0.25s;
 }
 .khungchinh>ul>li>ul>li{
-    padding: 21px 59px;
+    padding: 19px 61.4px;
 }
