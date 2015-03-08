@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -10,17 +11,23 @@
 		<div class="cover">
 			<div class="TopBar" align="right"> 
 				<a href="#" target="blank">	
-					<img src="image/fb_ico.ico" alt="Follow us on Facebook" title="Follow us on Facebook">
+					<img src="image/fb_ico.png" alt="Follow us on Facebook" title="Follow us on Facebook">
 				</a>
 				<a href="#" target="blank">
-					<img src="image/twitter_ico.ico" alt="Follow us on Twitter" title="Follow us on Twitter">
+					<img src="image/twitter_ico.png" alt="Follow us on Twitter" title="Follow us on Twitter">
 				</a>
-				<span style="color: white;"><a href="dangnhap.html"> Đăng nhập</a>
+				<a href="dangnhap.html">
+					<img src="image/login_ico.png" alt="Login" title="login">
+				</a>
+				<form action="logout.php" >
+					<input type="submit" name="submit" value="logout"/>
+				</form>
+				
 			</div>
 		</div>
     		<div class="khungchinh" >
         		<ul>
-						<li><a href="Code.html">Home</a></li>
+						<li><a href="Code.php">Home</a></li>
             			<li><a href="menu.php">Menu</a></li>
             			<li><a href="#">Đặt hàng</a></li>
 						<li><a href="#">Quản lí</a>
@@ -52,7 +59,19 @@
             <td><div align="center">
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <p class="style2">CHÚC CÁC BẠN CÓ MỘT NĂM MỚI VUI VẺ, AN KHANG, THỊNH VƯỢNG</p>
+			<p class="style2">
+				<?php
+					session_start();
+					if (isset($_SESSION['admin'])) {
+						if ($_SESSION['admin']=="yes"){
+							echo "CHÚC ADMIN CÓ MỘT NĂM MỚI VUI VẺ, AN KHANG, THỊNH VƯỢNG";
+						}
+					}
+					else {
+							echo "CHÚC CÁC BẠN CÓ MỘT NĂM MỚI VUI VẺ, AN KHANG, THỊNH VƯỢNG";
+						}
+				?>
+			</p>
             </div>
             <p align="center">&nbsp;</p></td>
         </tr>
@@ -79,7 +98,7 @@
 								<li> Địa chỉ: 144 Xuân Thủy, Cầu Giấy, Hà Nội </li>
 								<li> Điện thoại: 0912345678 </li>
 								<li> Facebook:<li>
-								<li> <a href = "Code.html">Về trang chủ</a></li>
+								<li> <a style = "color: black;" href = "Code.php">Về trang chủ</a></li>
 							</ul>
 						</div></td>
 						</tr>
