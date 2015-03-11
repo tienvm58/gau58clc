@@ -3,11 +3,14 @@
 <title> check login </title>
 </head>
 <body>
+<div>
+<div style = "margin: auto; width: 500px;">
 <?php
 session_start();
 
 if (isset($_SESSION['admin'])) {
-	echo "<br> session set your name: ".$_SESSION['name']." ".$_SESSION['admin']."<br>";
+	//echo "<br> session set your name: ".$_SESSION['name']." ".$_SESSION['admin']."<br>";
+	
 	echo '<meta http-equiv="refresh" content="2; url=Code.php">';
 }
 else {
@@ -19,7 +22,7 @@ else {
 		}
 		else {
 			$u=$_POST['name'];
-			echo "check name ".$u."<br>";
+			//echo "check name ".$u."<br>";
 		}
 		
 		if($_POST['pass'] == NULL) {
@@ -27,7 +30,7 @@ else {
 		}
 		else {
 			$p=$_POST['pass'];
-			echo "check pass ".$p."<br>";
+			//echo "check pass ".$p."<br>";
 		}
 		
 		if($u && $p) {
@@ -35,14 +38,14 @@ else {
 			$sql= "select * from user where name='".$u."' and pass='".$p."'";
 			$query= $conn->query($sql);
 			$row = $query->fetch_assoc();
-			echo "database: ".$row['name']." ".$row['pass']."<br>";
+			//echo "database: ".$row['name']." ".$row['pass']."<br>";
 			
 			if($query->num_rows == 0) {
-				echo "Username or password is not correct, please try again. reloading...";
-				echo '<meta http-equiv="refresh" content="2; url=dangnhap.html">';
+				echo "<h3> Username or password is not correct, please try again.<br> reloading... </h3>";
+				echo '<meta http-equiv="refresh" content="2; url=dangnhap.php">';
 			}
 			else {
-				echo "<br><b>match. Go back HOME</b><br>";
+				echo "<br><b>redirecting... Go back HOME</b><br>";
 				
 				$_SESSION['admin'] = "yes";
 				$_SESSION['name'] = $u;
@@ -52,5 +55,7 @@ else {
 	}
 }
 ?>
+</div>
+</div>
 </body>
 </html>

@@ -9,7 +9,16 @@
 	</head>
 
 <body>
-	<div style="margin-left: 30%;">
+	<?php
+	session_start();
+
+	if (isset($_SESSION['admin'])) {
+		//echo "<br> session set your name: ".$_SESSION['name']." ".$_SESSION['admin']."<br>";		
+		echo "<div style = ' width: 200px; margin: auto;'> <h1>you loged in<h1> </div>";
+		echo '<meta http-equiv="refresh" content="1; url=Code.php">';
+	} else {
+	?>
+	<div style="width: 300px; margin: auto; background-color: #aa6611">
 		<div>
 			<h1 style="color: black">Sign in</h1> 
 		</div>
@@ -29,5 +38,8 @@
 			<a style="color: black" href="https://www.google.com.vn/?gws_rd=ssl#q=forgot">forgot? Click here!</a>
 		</div>
 	</div>
+	<?php
+	}
+	?>
 </body>
 </html>

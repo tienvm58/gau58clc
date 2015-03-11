@@ -16,7 +16,7 @@
 				<a href="#" target="blank">
 					<img src="image/twitter_ico.png" alt="Follow us on Twitter" title="Follow us on Twitter">
 				</a>
-				<a href="dangnhap.html">
+				<a href="dangnhap.php">
 					<img src="image/login_ico.png" alt="Login" title="login">
 				</a>
 				<form action="logout.php" >
@@ -41,8 +41,6 @@
     
 		</div>
 		
-        
-        
         <style type="text/css">
         <!--
         .style2 {
@@ -64,7 +62,7 @@
 					session_start();
 					if (isset($_SESSION['admin'])) {
 						if ($_SESSION['admin']=="yes"){
-							echo "CHÚC ADMIN CÓ MỘT NĂM MỚI VUI VẺ, AN KHANG, THỊNH VƯỢNG";
+							echo "HELLO ADMIN <a style = 'color: blue;' href= 'addacount.php'> click here to set user </a>";
 						}
 					}
 					else {
