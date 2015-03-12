@@ -29,10 +29,10 @@
         		<ul>
 						<li><a href="Code.php">Home</a></li>
             			<li><a href="menu.php">Menu</a></li>
-            			<li><a href="#">Đặt hàng</a></li>
+            			<li><a href="dangnhap.php">Đặt hàng</a></li>
 						<li><a href="#">Quản lí</a>
 						<ul>
-							<li><a href="Add.php">Thêm món</a></li>
+							<li><a href="dangnhap.php">Thêm món</a></li>
 							<li><a href="#">Xóa</a></li>
 						</ul>
             			<li><a href="#">Liên hệ</a></li>

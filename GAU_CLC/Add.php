@@ -9,7 +9,7 @@
 	<body>
 		
          <?php
-            include 'head.html';
+            include 'head_admin.html';
             error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
         ?>
 	

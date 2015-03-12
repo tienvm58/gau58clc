@@ -11,7 +11,7 @@
 		
         
         <?php
-	include 'head.html';
+		include 'head_admin.html';
         $connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
         mysql_select_db("nhahang",$connection);
         $sql = "select * from khaivi";
