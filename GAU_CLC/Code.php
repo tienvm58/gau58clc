@@ -19,9 +19,6 @@
 				<a href="dangnhap.php">
 					<img src="image/login_ico.png" alt="Login" title="login">
 				</a>
-				<form action="logout.php" >
-					<input type="submit" name="submit" value="logout"/>
-				</form>
 				
 			</div>
 		</div>
@@ -33,10 +30,12 @@
 						<li><a href="#">Quản lí</a>
 						<ul>
 							<li><a href="dangnhap.php">Thêm món</a></li>
-							<li><a href="#">Xóa</a></li>
+							<li><a href="dangnhap.php">Xóa món</a></li>
+							<li><a href="dangnhap.php">Thêm bàn</a></li>
+							<li><a href="dangnhap.php">Xóa bàn</a></li>
 						</ul>
             			<li><a href="#">Liên hệ</a></li>
-            			<li><a href="#">Góp ý</a></li>
+            			<li><a href="dangnhap.php">Góp ý</a></li>
         		</ul>
     
 		</div>
@@ -59,15 +58,8 @@
             <p>&nbsp;</p>
 			<p class="style2">
 				<?php
-					session_start();
-					if (isset($_SESSION['admin'])) {
-						if ($_SESSION['admin']=="yes"){
-							echo "HELLO ADMIN <a style = 'color: blue;' href= 'addacount.php'> click here to set user </a>";
-						}
-					}
-					else {
 							echo "CHÚC CÁC BẠN CÓ MỘT NĂM MỚI VUI VẺ, AN KHANG, THỊNH VƯỢNG";
-						}
+						
 				?>
 			</p>
             </div>

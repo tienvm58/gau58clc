@@ -27,7 +27,7 @@
             <p>&nbsp;</p>
 			<p class="style2">
 				<?php
-					echo "HELLO ADMIN <a style = 'color: blue;' href= 'addacount.php'> click here to set user </a>";
+					echo "HELLO ADMIN ";
 				?>
 			</p>
             </div>

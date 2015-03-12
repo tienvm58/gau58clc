@@ -6,14 +6,8 @@
 <div>
 <div style = "margin: auto; width: 500px;">
 <?php
-session_start();
+	session_start();
 
-if (isset($_SESSION['admin'])) {
-	//echo "<br> session set your name: ".$_SESSION['name']." ".$_SESSION['admin']."<br>";
-	
-	echo '<meta http-equiv="refresh" content="2; url=Code.php">';
-}
-else {
 	if(isset($_POST['submit']))
 	{
 		$u=$p="";
@@ -39,21 +33,28 @@ else {
 			$query= $conn->query($sql);
 			$row = $query->fetch_assoc();
 			//echo "database: ".$row['name']." ".$row['pass']."<br>";
-			
+			$_SESSION['name'] = $row['name'];
+			$_SESSION['level'] = $row['level'];
+				
 			if($query->num_rows == 0) {
 				echo "<h3> Username or password is not correct, please try again.<br> reloading... </h3>";
 				echo '<meta http-equiv="refresh" content="2; url=dangnhap.php">';
 			}
-			else {
+			else if(isset($_SESSION['name']) && $_SESSION['level'] == 2)
+			{
 				echo "<br><b>redirecting... Go back HOME</b><br>";
 				
-				$_SESSION['admin'] = "yes";
-				$_SESSION['name'] = $u;
-				echo '<meta http-equiv="refresh" content="2; url=Code.php">';
+				echo '<meta http-equiv="refresh" content="2; url=Code_user.php">';
+			}
+			else if(isset($_SESSION['name']) && $_SESSION['level'] == 1)
+			{
+				echo "<br><b>redirecting... Go back HOME</b><br>";
+				
+				echo '<meta http-equiv="refresh" content="2; url=Code_admin.php">';
 			}
 		}
+	
 	}
-}
 ?>
 </div>
 </div>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2015 at 04:41 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Generation Time: Mar 12, 2015 at 05:03 PM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,17 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `nhahang`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE IF NOT EXISTS `admin` (
-  `name` varchar(35) NOT NULL,
-  `pass` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE DATABASE IF NOT EXISTS `nhahang` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `nhahang`;
 
 -- --------------------------------------------------------
 
@@ -38,10 +29,11 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 CREATE TABLE IF NOT EXISTS `desert` (
-`STT` int(2) NOT NULL,
+  `STT` int(2) NOT NULL AUTO_INCREMENT,
   `Name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `Price` int(10) NOT NULL,
+  PRIMARY KEY (`STT`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `desert`
@@ -59,10 +51,11 @@ INSERT INTO `desert` (`STT`, `Name`, `Price`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `drink` (
-`STT` int(2) NOT NULL,
+  `STT` int(2) NOT NULL AUTO_INCREMENT,
   `Name` varchar(30) NOT NULL,
-  `Price` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `Price` int(10) NOT NULL,
+  PRIMARY KEY (`STT`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `drink`
@@ -79,10 +72,11 @@ INSERT INTO `drink` (`STT`, `Name`, `Price`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `khaivi` (
-`STT` int(2) NOT NULL,
+  `STT` int(2) NOT NULL AUTO_INCREMENT,
   `Name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `Price` int(10) NOT NULL,
+  PRIMARY KEY (`STT`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `khaivi`
@@ -101,10 +95,11 @@ INSERT INTO `khaivi` (`STT`, `Name`, `Price`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `monchinh` (
-`STT` int(2) NOT NULL,
+  `STT` int(2) NOT NULL AUTO_INCREMENT,
   `Name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+  `Price` int(10) NOT NULL,
+  PRIMARY KEY (`STT`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `monchinh`
@@ -114,10 +109,8 @@ INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
 (1, 'Chicken', 200000),
 (2, 'Beef', 300000),
 (3, 'láº¡p xÆ°á»ng', 30000),
-(4, 'láº¡p xÆ°á»ng', 30000),
-(5, 'láº¡p xÆ°á»ng', 30000),
-(6, 'láº¡p xÆ°á»ng', 30000),
-(7, 'mÃµm lá»£n', 30000);
+(4, 'mÃµm lá»£n', 30000),
+(5, 'GÃ  háº§m', 300000);
 
 -- --------------------------------------------------------
 
@@ -127,80 +120,20 @@ INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
 
 CREATE TABLE IF NOT EXISTS `user` (
   `name` varchar(255) NOT NULL,
-  `pass` char(50) NOT NULL
+  `pass` char(50) NOT NULL,
+  `level` int(2) NOT NULL,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`name`, `pass`) VALUES
-('admin', 'admin');
+INSERT INTO `user` (`name`, `pass`, `level`) VALUES
+('admin', 'admin', 1),
+('ban1', 'ban1', 2),
+('ban2', 'ban2', 2);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
- ADD PRIMARY KEY (`name`);
-
---
--- Indexes for table `desert`
---
-ALTER TABLE `desert`
- ADD PRIMARY KEY (`STT`);
-
---
--- Indexes for table `drink`
---
-ALTER TABLE `drink`
- ADD PRIMARY KEY (`STT`);
-
---
--- Indexes for table `khaivi`
---
-ALTER TABLE `khaivi`
- ADD PRIMARY KEY (`STT`);
-
---
--- Indexes for table `monchinh`
---
-ALTER TABLE `monchinh`
- ADD PRIMARY KEY (`STT`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
- ADD PRIMARY KEY (`name`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `desert`
---
-ALTER TABLE `desert`
-MODIFY `STT` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `drink`
---
-ALTER TABLE `drink`
-MODIFY `STT` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `khaivi`
---
-ALTER TABLE `khaivi`
-MODIFY `STT` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `monchinh`
---
-ALTER TABLE `monchinh`
-MODIFY `STT` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
