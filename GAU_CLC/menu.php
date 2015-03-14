@@ -11,10 +11,19 @@
 		
         
         <?php
-		include 'head_admin.html';
+		session_start();
+		if(isset($_SESSION['name']) && $_SESSION['level'] == 1){
+			include 'head_admin.html';
+		}
+		else if(isset($_SESSION['name']) && $_SESSION['level'] == 2){
+			include 'head_user.html';
+		}
+		else {
+			include 'head.html';
+		}
         $connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
         mysql_select_db("nhahang",$connection);
-        $sql = "select * from khaivi";
+        $sql = "select * from khaivi"; // chon du lieu de in mon khai vi
         $result = mysql_query($sql);
         ?>
         <style type="text/css">
@@ -54,6 +63,7 @@
        
        
        <?php
+	   //in mon chinh
 	   $sql = "select * from monchinh";
        $result = mysql_query($sql);
 	   ?>      
@@ -76,6 +86,7 @@
        
        
         <?php
+		//in do uong
 	   $sql = "select * from drink";
        $result = mysql_query($sql);
 	   ?>      
@@ -97,6 +108,7 @@
        
        
         <?php
+		//in mon trang mieng
 	   $sql = "select * from desert";
        $result = mysql_query($sql);
 	   ?>      

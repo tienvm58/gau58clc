@@ -9,6 +9,10 @@
 	<body>
 		<?php
 			include 'head_admin.html';
+		?>
+		<div  style="width: 300px; margin: auto">
+		<?php
+			
 		
 			if(isset($_POST['delacc'])) {		// delete acount
 				//echo "delacc be set<br>";
@@ -23,7 +27,7 @@
 				} else {
 					$query = "delete from user where name= '".$n."'";
 					if ($conn->query($query)) {
-						echo "delete ".$n." pass: ".$p." successfull <br>";
+						echo "delete ".$n." successfull <br>";
 					} else {
 						echo "delete failed <br>";
 					}	
@@ -32,37 +36,61 @@
 			}
 		
 		?>
-		
-		
-		<h3>
-		<div style="width: 300px; margin: auto; background-color: yellow;">
-		<?php
-			$conn = new mysqli("localhost", "root", "", "nhahang") or die ("can't connect database");
-			$query = "select * from user";
-			$result = $conn->query($query);
-			echo "list acount:<br>";
-			while ($row = $result->fetch_assoc()) {
-				echo $row['name']." ~ ".$row['pass']."<br>";
-			}
-			$conn->close();
-		?>
 		</div>
-		</h3>
+		
+		<?php
+		$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
+        mysql_select_db("nhahang",$connection);
+        $sql = "select * from user"; // chon du lieu tu bang user
+        $result = mysql_query($sql);
+        ?>
+        <style type="text/css">
+        <!--
+        .style2 {
+	       font-size: 36px;
+	       color: #FF0000;
+        }
+        -->
+        </style>
+        <br><br><br><br>
+        <div align="center"</div>
+        <table width="449" border="1" >
+            <CAPTION><span class="style2">LIST USER</span></CAPTION>
+            <tr align="center" valign="middle">
+                <td width="211"><div align="center">Name</div></td>
+                <td width="165"><div align="center">Pass</div></td>
+				<td width="165"><div align="center">Level</div></td>
+            </tr>
+            
+        <?php
+        while($data=mysql_fetch_assoc($result)){
+        ?>
+        <tr>
+    	   <td width="51" height="25"><div align="center"><?php echo $data["name"]; ?></div></td>
+    	   <td width="211"><div align="center"><?php echo $data["pass"]; ?></div></td>
+    	   <td width="165"><div align="center"><?php echo $data["level"]; ?></div></td>
+
+        </tr>
+	   <?php
+	   }
+	   ?>
+	
 	
 	
 	
 		<br>
-		<div style="width: 300px; margin: auto; background-color: #ff6611">
+		<div style="width: 300px; margin: auto">
 		<div>
 			<h1 style="color: black">DELETE ACOUNT</h1> 
 		</div>
-		<form name="formdelacc" action="addacount.php" method="post">
+		<form name="formdelacc" action="#" method="post">
 			<div><h2>
-				<label  for="name">add user</label>
+				<label  for="name">User</label>
 				<input width = "100%" type="text" name="delname" placeholder="Username" required/>
 				<br>
-				<label  for="password">pass</label>
-				<input width = "100%" type="password" name="delpass" placeholder="Password" required />
+				<label  for="password">Pass</label>
+				<input width = "100%" type="text" name="delpass" placeholder="Password" required />
+				<br><br>
 				<input type="submit" name="delacc" value="delete"/>
 				</h2>
 			</div>
