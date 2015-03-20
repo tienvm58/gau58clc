@@ -2,10 +2,10 @@
 -- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 12, 2015 at 05:03 PM
--- Server version: 5.6.11
--- PHP Version: 5.5.3
+-- Client: 127.0.0.1
+-- Généré le: Sam 14 Mars 2015 à 01:31
+-- Version du serveur: 5.6.11
+-- Version de PHP: 5.5.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `nhahang`
+-- Base de données: `nhahang`
 --
 CREATE DATABASE IF NOT EXISTS `nhahang` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `nhahang`;
@@ -25,7 +25,7 @@ USE `nhahang`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `desert`
+-- Structure de la table `desert`
 --
 
 CREATE TABLE IF NOT EXISTS `desert` (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `desert` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `desert`
+-- Contenu de la table `desert`
 --
 
 INSERT INTO `desert` (`STT`, `Name`, `Price`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `desert` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `drink`
+-- Structure de la table `drink`
 --
 
 CREATE TABLE IF NOT EXISTS `drink` (
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `drink` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `drink`
+-- Contenu de la table `drink`
 --
 
 INSERT INTO `drink` (`STT`, `Name`, `Price`) VALUES
@@ -68,7 +68,29 @@ INSERT INTO `drink` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `khaivi`
+-- Structure de la table `gopy`
+--
+
+CREATE TABLE IF NOT EXISTS `gopy` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(15) NOT NULL,
+  `gopy` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `gopy`
+--
+
+INSERT INTO `gopy` (`id`, `username`, `gopy`) VALUES
+(1, 'u', 'g'),
+(2, 'u', 'g'),
+(3, 'bÃ n 1', 'chÃºng tÃ´i cáº£m tháº¥y hÃ´m nay Ä‘á»“ Äƒn khÃ´ng ngon');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `khaivi`
 --
 
 CREATE TABLE IF NOT EXISTS `khaivi` (
@@ -79,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `khaivi` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `khaivi`
+-- Contenu de la table `khaivi`
 --
 
 INSERT INTO `khaivi` (`STT`, `Name`, `Price`) VALUES
@@ -91,7 +113,7 @@ INSERT INTO `khaivi` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `monchinh`
+-- Structure de la table `monchinh`
 --
 
 CREATE TABLE IF NOT EXISTS `monchinh` (
@@ -102,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `monchinh` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `monchinh`
+-- Contenu de la table `monchinh`
 --
 
 INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
@@ -115,7 +137,7 @@ INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Structure de la table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
@@ -126,13 +148,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user`
+-- Contenu de la table `user`
 --
 
 INSERT INTO `user` (`name`, `pass`, `level`) VALUES
 ('admin', 'admin', 1),
 ('ban1', 'ban1', 2),
-('ban2', 'ban2', 2);
+('ban2', 'ban2', 2),
+('phan', 'anh', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
