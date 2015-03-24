@@ -16,24 +16,47 @@
 	
 	
 	<br><br><br><br>
-	<div style="width: 300px; margin: auto">
-		<div>
-			<h1 style="color: black">Sign in</h1> 
-			<br><br>
-		</div>
-		<form name="formlogin" action="checklogin.php" method="post">
-			<div><h2>
-				<label  for="name">User</label>
-				<input width = "100%" type="text" name="name" placeholder="Username" required/>
-				<br>
-				<label  for="password">Pass</label>
-				<input width = "100%" type="password" name="pass" placeholder="Password" required />
-				<br><br>
-				<input type="submit" name="submit" value="Sign in"/>
-				</h2>
+	<form name="formlogin" action="checklogin.php" method="post">
+		<fieldset class = "frm-set">
+			<legend></legend>
+			<div class = "login_board">
+				<dl>
+					<dt>
+						<label  for="name"><b>Tên truy cập</b></label>
+					</dt>
+					<dd>
+						<input width = "100%" type="text" name="name" size = "25" maxlength = "40" placeholder="Username" required/>
+					</dd>
+					<br>
+				</dl>
+				<dl>
+					<dt>
+						<label  for="password"><b>Mật khẩu</b></label>
+					</dt>
+					<dd>
+						<input width = "100%" type="password" name="pass" size = "25" maxlength = "40" placeholder="Password" required />
+					</dd>
+					<br>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd>
+						<label for = "autologin" id = "lbl_autologin">
+							<input type = "checkbox" name = "autologin" id = "autologin" tabindex = "4" class = "checkbox" checked = "checked">
+							Ghi nhớ
+						</label>
+					</dd>
+				</dl>
 			</div>
-		</form>
-	</div>
+			<br>
+		</fieldset>
+		<br>
+		<div align = "center">
+			<input type="submit" name="submit" value="Đăng nhập"/>
+		</div>
+	</form>
+	<br>
+	
 	<?php
 		include 'end.html';
 	?>

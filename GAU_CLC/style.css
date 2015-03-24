@@ -18,7 +18,7 @@ body {
 .cover{
     width: 1014px;
     height:335px;
-    background: url(image/cover.png) no-repeat;
+    background: url(image/Banner.png) no-repeat;
     margin-top: 0px auto;
     margin:  0px auto;
 }
@@ -27,7 +27,7 @@ body {
 .khungchinh{
     width:1014px; 
     height: 61px;
-    background: #F8182A;
+    background: url(image/1.png);
     margin: 0px auto;
     margin-top: -1px;
 }
@@ -54,9 +54,49 @@ body {
     display: block;
 }
 .khungchinh ul li:hover{
-    background: darkorange;
+    background: image/1.png;
     transition: all 0.25s;
 }
 .khungchinh>ul>li>ul>li{
     padding: 19px 61.4px;
+}
+
+.login_board {
+	width: 200px;
+	line-height: 30px;
+	margin-left: 53%;
+	margin-right: 50%;
+	background-image: initial;
+	background-position: initial;
+	background-size: initial;
+	background-repeat: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(241,241,241);
+	border-radius: 50%;
+	box-shadow: 1px 0px 15px -6px;
+	padding: 40px;
+	text-align: center;
+}
+
+fieldset.frm-set{
+	width: 1014px;
+	border: none;
+	margin: 0px;
+	padding-left: 4px;
+	text-align: center;
+}
+
+dl{
+	display: block;
+}
+
+dd{
+	display: block;
+}
+
+.forgot_pass a{
+	text-decoration: underline;
+	text-align: center;	
 }
