@@ -1,10 +1,11 @@
 <html>
 <head>
-<title> check login </title>
+	<meta charset="utf-8">
+	<title> Welcome to Gấu's restaurant </title>
 </head>
 <body>
 <div>
-<div style = "margin: auto; width: 500px;">
+<div style = "width: 500px;">
 <?php
 	session_start();
 
@@ -42,13 +43,13 @@
 			}
 			else if(isset($_SESSION['name']) && $_SESSION['level'] == 2)
 			{
-				echo "<br><b>redirecting... Go back HOME</b><br>";
+				echo "<br><b>Đăng nhập thành công</b><br><b>Chờ một chút trình duyệt sẽ tự chuyển</b>";
 				
 				echo '<meta http-equiv="refresh" content="2; url=Code_user.php">';
 			}
 			else if(isset($_SESSION['name']) && $_SESSION['level'] == 1)
 			{
-				echo "<br><b>redirecting... Go back HOME</b><br>";
+				echo "<br><b>Đăng nhập thành công</b><br><b>Chờ một chút trình duyệt sẽ tự chuyển</b>";
 				
 				echo '<meta http-equiv="refresh" content="2; url=Code_admin.php">';
 			}

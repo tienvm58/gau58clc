@@ -27,7 +27,7 @@
             <p>&nbsp;</p>
 			<p class="style2">
 				<?php
-					echo "WELCOME TO GẤU'S RESTAURANT";
+					echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
 				?>
 			</p>
             </div>

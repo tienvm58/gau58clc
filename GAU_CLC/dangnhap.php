@@ -52,13 +52,15 @@
 		</fieldset>
 		<br>
 		<div align = "center">
-			<input type="submit" name="submit" value="Đăng nhập"/>
+			<input type="submit" name="submit" value="Đăng nhập" class = "button_action"/>
 		</div>
 	</form>
 	<br>
 	
-	<?php
-		include 'end.html';
-	?>
+	<div align = "center">
+		<?php
+			include 'end.html';
+		?>
+	</div>
 </body>
 </html>

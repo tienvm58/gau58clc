@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -23,27 +24,22 @@
 		<?php
 			include 'head_user.html'
 		?>
-	<br><br><br><br>
-	<DIV ALIGN="center">
-	<table border="1" height="200">
-		<TR>
-			<td colspan = "3" class ="tit"> PLEASE TYPE ON THE TEXT SPACE BELOW </TD>
-		</TR>
-		<tr>
-			<td>
-				<form name="gopyus" action="gopyuser.php" method="post" >
-					<P>TYPE YOUR COMMENT HERE </P>
-					<input type="text" name="gopy" size = 80 maxlength=1000/> <br /><br />
-					<p>confirm your name user</p>
-					<input type="text" name="usname" size = 5 maxlength=15/> <br /><br />
-					<input type="submit" name="ok" value="SEND"/> <br />
-				</form>
-			</td>
-		</tr>
-	</table>
-	</div>
-	<?php
+		<br><br><br><br>
+		<form name="gopyus" action="gopyuser.php" method="post" >
+			<div class = "comment">
+				<h2>Nhận xét của bạn về chất lượng của nhà hàng </h2><br>
+				<b>Tên của bạn bạn</b><br>
+				<input type="text" name="usname" size = "20" maxlength = "25"/> <br><br>
+				<br><b>Nhận xét của bạn </b><br>
+				<textarea rows = "8" cols = "60" type="text" name="gopy" class = "box_gopy"> </textarea> <br><br> 
+				<input type="submit" name="ok" class = "button_action"/> <br><br>
+			</div>
+		</form>
+
+	<div align = "center">
+		<?php
 			include 'end.html';
-	?>
+		?>
+	</div>
 	</body>
 </html>

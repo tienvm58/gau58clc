@@ -8,35 +8,25 @@
 	</head>
 		
 	<body>
-		<div class="cover">
-			<div class="TopBar" align="right"> 
-				<a href="#" target="blank">	
-					<img src="image/fb_ico.png" alt="Follow us on Facebook" title="Follow us on Facebook">
-				</a>
-				<a href="#" target="blank">
-					<img src="image/twitter_ico.png" alt="Follow us on Twitter" title="Follow us on Twitter">
-				</a>
-				<a href="dangnhap.php">
-					<img src="image/login_ico.png" alt="Login" title="login">
-				</a>
-				
-			</div>
-		</div>
-    		<div class="khungchinh" >
-        		<ul>
-						<li><a href="Code.php">Home</a></li>
-            			<li><a href="menu.php">Menu</a></li>
-            			<li><a href="dangnhap.php">Đặt hàng</a></li>
-						<li><a href="#">Quản lí</a>
-						<ul>
-							<li><a href="dangnhap.php">Thêm món</a></li>
-							<li><a href="dangnhap.php">Xóa món</a></li>
-							<li><a href="dangnhap.php">Thêm bàn</a></li>
-							<li><a href="dangnhap.php">Xóa bàn</a></li>
-						</ul>
-            			<li><a href="#">Liên hệ</a></li>
-            			<li><a href="dangnhap.php">Góp ý</a></li>
-        		</ul>
+		<?php
+			include 'TopBar.html';
+		?>
+		
+    	<div class="tab" >
+       		<ul>
+					<li><a href="Code.php">Trang chủ</a></li>
+           			<li><a href="menu.php">Thực đơn</a></li>
+           			<li><a href="dangnhap.php">Đặt hàng</a></li>
+					<li><a href="#">Quản lý</a>
+					<ul>
+						<li><a href="dangnhap.php">Thêm món</a></li>
+						<li><a href="dangnhap.php">Xóa món</a></li>
+						<li><a href="dangnhap.php">Thêm bàn</a></li>
+						<li><a href="dangnhap.php">Xóa bàn</a></li>
+					</ul>
+           			<li><a href="#">Liên hệ</a></li>
+           			<li><a href="dangnhap.php">Góp ý</a></li>
+       		</ul>
     
 		</div>
 		
@@ -58,7 +48,7 @@
             <p>&nbsp;</p>
 			<p class="style2">
 				<?php
-							echo "CHÚC CÁC BẠN CÓ MỘT NĂM MỚI VUI VẺ, AN KHANG, THỊNH VƯỢNG";
+							echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
 						
 				?>
 			</p>
@@ -88,7 +78,6 @@
 								<li> Địa chỉ: 144 Xuân Thủy, Cầu Giấy, Hà Nội </li>
 								<li> Điện thoại: 0912345678 </li>
 								<li> Facebook:<li>
-								<li> <a style = "color: black;" href = "Code.php">Về trang chủ</a></li>
 							</ul>
 						</div></td>
 						</tr>

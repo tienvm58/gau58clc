@@ -2,9 +2,8 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>add acount</title>
+		<title>Thêm tài khoản</title>
 		<style>
-
 		</style>
 	</head>
 
@@ -25,13 +24,13 @@
 				$sqlcheck= "select * from user where name='".$n."'";
 				$qcheck = $conn->query($sqlcheck);
 				if ($qcheck->num_rows!=0) {
-					echo "user: ".$n." existed<br>";
+					echo "Tài khoản ".$n." đã tồn tại!<br>";
 				} else {
 					$query = "insert into user(name, pass, level) values ('".$n."','".$p."','".$l."')";
 					if ($conn->query($query)) {
-						echo "add user:".$n." with pass: ".$p." successfull <br>";
+						echo "Thêm tài khoản:".$n." with pass: ".$p." thành công <br>";
 					} else {
-						echo "no user added";
+						echo "không thành công";
 					}	
 				}
 				$conn->close();
@@ -52,16 +51,17 @@
         .style2 {
 	       font-size: 36px;
 	       color: #FF0000;
+		   padding-bottom: 20px;
         }
         -->
         </style>
         <br><br><br><br>
         <div align="center"</div>
         <table width="449" border="1" >
-            <CAPTION><span class="style2">LIST USER</span></CAPTION>
+            <CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN</span></CAPTION>
             <tr align="center" valign="middle">
-                <td width="211"><div align="center">Name</div></td>
-                <td width="165"><div align="center">Pass</div></td>
+                <td width="211"><div align="center">Tên đăng nhập</div></td>
+                <td width="165"><div align="center">Mật khẩu</div></td>
 				<td width="165"><div align="center">Level</div></td>
             </tr>
             
@@ -77,28 +77,29 @@
 	   <?php
 	   }
 	   ?>
-		<div style = "margin-left: 12%; margin-right:12%;">
-			<div style = "margin-left: 35%; margin-right: 20%;">
-		
-			<form name="formaddacc" action="#" method="post">
-			<div align = "left">
-			<div><h2>
-				<label  for="name">Add user</label>
-				<input width = "100%" type="text" name="addname" placeholder="Username" required/>
-				<br>
-				<label  for="password">Pass    </label>
-				<input width = "100%" type="text" name="addpass" placeholder="Password" required />
-				<br>
-				<label  for="level">Level</label>
-				<input width = "100%" type="text" name="addlevel" placeholder="Level" required />
-				<br>
-				<input type="submit" name="addacc" value="Add"/>
-				</h2>
-			</div>
-			</div>
-			</form>
-		</div>
-		</div>
+
+		<form name="formaddacc" action="#" method="post">
+			<fieldset class = "frm-set">
+				<legend></legend>
+				<div class = "account_action">
+				<div><b>
+					<div align = "center"> <h2>Nhập thông tin tài khoản</h2> </div> 
+					<br>
+					<label  for="name">Tên đăng nhập: </label>
+					<input width = "100%" type="text" name="addname" maxlength = "25" placeholder="Username" required/>
+					<br>
+					<label  for="password">Mật khẩu:  </label>
+					<input width = "100%" type="text" name="addpass" maxlength = "25" placeholder="Password" required />
+					<br>
+					<label  for="level">Level:</label>
+					<input width = "100%" type="text" name="addlevel" maxlength = "1" placeholder="Level" required />
+					<br><br>
+					<div align = "center"><input type="submit" name="addacc" value="Add" class = "button_action"/> </div>
+				</b></div>
+				</div>
+			</fieldset>
+		</form>
+
 	
 	<?php
 		include 'end.html';

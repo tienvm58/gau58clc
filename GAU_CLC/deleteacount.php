@@ -23,13 +23,13 @@
 				$sqlcheck= "select * from user where name='".$n."' and pass='".$p."'";
 				$qcheck = $conn->query($sqlcheck);
 				if ($qcheck->num_rows==0) {
-					echo "can't find user: ".$n." and pass: ".$p."<br>";
+					echo "Không thể tìm thấy tài khoản ".$n."<br>";
 				} else {
 					$query = "delete from user where name= '".$n."'";
 					if ($conn->query($query)) {
-						echo "delete ".$n." successfull <br>";
+						echo "Xóa tài khoản ".$n." thành công <br>";
 					} else {
-						echo "delete failed <br>";
+						echo "Xóa thất bại <br>";
 					}	
 				}
 				$conn->close();
@@ -49,16 +49,17 @@
         .style2 {
 	       font-size: 36px;
 	       color: #FF0000;
+		   padding-bottom: 20px;
         }
         -->
         </style>
         <br><br><br><br>
         <div align="center"</div>
         <table width="449" border="1" >
-            <CAPTION><span class="style2">LIST USER</span></CAPTION>
+            <CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN</span></CAPTION>
             <tr align="center" valign="middle">
-                <td width="211"><div align="center">Name</div></td>
-                <td width="165"><div align="center">Pass</div></td>
+                <td width="211"><div align="center">Tên đăng nhập</div></td>
+                <td width="165"><div align="center">Mật khẩu</div></td>
 				<td width="165"><div align="center">Level</div></td>
             </tr>
             
@@ -79,23 +80,23 @@
 	
 	
 		<br>
-		<div style="width: 300px; margin: auto">
-		<div>
-			<h1 style="color: black">DELETE ACOUNT</h1> 
-		</div>
+		
 		<form name="formdelacc" action="#" method="post">
-			<div><h2>
-				<label  for="name">User</label>
-				<input width = "100%" type="text" name="delname" placeholder="Username" required/>
-				<br>
-				<label  for="password">Pass</label>
-				<input width = "100%" type="text" name="delpass" placeholder="Password" required />
-				<br><br>
-				<input type="submit" name="delacc" value="delete"/>
-				</h2>
-			</div>
+			<fieldset class = "frm-set">
+				<legend></legend>
+				<div class = "account_action"><b>
+					<div align = "center"> <h2>Nhập tài khoản bạn muốn xóa</h2> </div> 
+					<br>
+					<label  for="name">Tên đăng nhập:</label>
+					<input width = "100%" type="text" name="delname" maxlength = "25" placeholder="Username" required/>
+					<br>
+					<label  for="password">Mật khẩu:</label>
+					<input width = "100%" type="text" name="delpass" maxlength = "25" placeholder="Password" required />
+					<br><br>
+					<div align = "center"><input type="submit" name="delacc" value="Xóa" maxlength = "25" class = "button_action"/></div>
+				</b></div>
 		</form>
-		</div>
+		
 		<?php
 			include 'end.html';
 		?>

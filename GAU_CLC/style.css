@@ -1,13 +1,12 @@
 
 
-*{margin : 0px; padding: 0px;}
-li{
-    list-style: none;
+* {
+	margin : 0px; 
+	padding: 0px;
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
+li {
+    list-style: none;
 }
 
 body {
@@ -15,7 +14,11 @@ body {
 	font: 15px Arial;
 }
 
-.cover{
+div {
+	display: block;
+}
+
+.banner{
     width: 1014px;
     height:335px;
     background: url(image/Banner.png) no-repeat;
@@ -23,48 +26,61 @@ body {
     margin:  0px auto;
 }
 
+.tab a{
+    text-decoration: none;
+    color: #fff;
+}
 
-.khungchinh{
-    width:1014px; 
-    height: 61px;
-    background: url(image/1.png);
+.tab{
+    width:1050px; 
+    height: 88px;
+    background: url(image/tab.png) no-repeat;
     margin: 0px auto;
     margin-top: -1px;
+	margin-left: 12.5%;
+	margin-right: 12.5%;
+	padding: 6px 8px;
 }
 
-.khungchinh>ul>li{
+.tab>ul>li{
     float: left;
-    padding: 21px 61.4px;
+    padding: 21px 56px;
     position: relative;
-    
+	text-align: center;
 }
-.khung>ul>li:last-child:last-child{
+
+.tab>ul>li:last-child:last-child{
     border-right: none;
 }
 
-.khungchinh>ul>li>ul{
+.tab>ul>li>ul{
+	margin-bottom: -5px;
     display: none;
     position: absolute;
-    background: #F8182A;
+    background: url(image/tab_li.png);
     top:60px;
     left:0px;
-    width:171px;
+    width:175px;
+	text-align: center;
+	padding: 2px;
 }
-.khungchinh>ul>li:hover ul{ 
+
+.tab>ul>li:hover ul{ 
     display: block;
 }
-.khungchinh ul li:hover{
-    background: image/1.png;
+
+.tab ul li:hover{
     transition: all 0.25s;
 }
-.khungchinh>ul>li>ul>li{
+
+.tab>ul>li>ul>li{
     padding: 19px 61.4px;
 }
 
 .login_board {
 	width: 200px;
 	line-height: 30px;
-	margin-left: 53%;
+	margin-left: 51%;
 	margin-right: 50%;
 	background-image: initial;
 	background-position: initial;
@@ -73,15 +89,72 @@ body {
 	background-attachment: initial;
 	background-origin: initial;
 	background-clip: initial;
-	background-color: rgb(241,241,241);
-	border-radius: 50%;
-	box-shadow: 1px 0px 15px -6px;
+	background-color: rgb(239,241,239);
+	border-radius: 10%;
+	box-shadow: 1px 0px 17px -6px;
 	padding: 40px;
 	text-align: center;
 }
 
+.add_board{
+	width: 350px;
+	line-height: 30px;
+	margin-left: 44.5%;
+	background-image: initial;
+	background-position: initial;
+	background-size: initial;
+	background-repeat: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(239,241,239);
+	border-radius: 10%;
+	box-shadow: 1px 0px 15px -6px;
+	padding: 45px;
+	text-align: left;
+}
+
+.account_action{
+	width: 400px;
+	height: auto;
+	line-height: 30px;
+	margin-left: 27.7%;
+	background-image: initial;
+	background-position: initial;
+	background-size: initial;
+	background-repeat: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(239,241,239);
+	border-radius: 10%;
+	box-shadow: 1px 0px 15px -6px;
+	padding: 45px;
+	text-align: left;
+}
+
+.comment{
+	width: 600px;
+	line-height: 35px;
+	margin-left: 24%;
+	background-image: initial;
+	background-position: initial;
+	background-size: initial;
+	background-repeat: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(239,241,239);
+	border-radius: 10%;
+	box-shadow: 1px 0px 22px -6px;
+	padding: 40px;
+	text-align: left;
+	font-family: Calibri;
+	font-size: 16px;
+}
+
 fieldset.frm-set{
-	width: 1014px;
+	width: 1050px;
 	border: none;
 	margin: 0px;
 	padding-left: 4px;
@@ -99,4 +172,48 @@ dd{
 .forgot_pass a{
 	text-decoration: underline;
 	text-align: center;	
+}
+
+.info_footer{
+	font-family: Blackletter;
+	font-size: 16px;
+	text-align: left;
+}
+
+.check_login{
+	margin-left: 65%;
+	
+}
+
+table {
+	font: 15px Blackletter;
+	
+}
+			
+td{
+	border: 1px solid #CC0000;
+	text-align: left;
+	padding: 2px;
+	margin-left: 5px;
+}
+			
+.tit{
+	color: white;
+	background: red;
+	font-weight: bold;
+	font-size: 20;
+}
+
+.gopy table{
+	border-color: red;
+	border: 1px solid;
+	
+}
+
+.button_action{
+	height: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }

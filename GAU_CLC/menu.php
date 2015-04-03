@@ -3,7 +3,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<meta name="author" content="GallerySoft.info" />
     		<link rel="stylesheet" href="style.css" type="text/css" />
-		<title>	Món chính	</title>
+		<title>	Thực đơn	</title>
 	</head>
 		
 	<body>
@@ -11,37 +11,39 @@
 		
         
         <?php
-		session_start();
-		if(isset($_SESSION['name']) && $_SESSION['level'] == 1){
-			include 'head_admin.html';
-		}
-		else if(isset($_SESSION['name']) && $_SESSION['level'] == 2){
-			include 'head_user.html';
-		}
-		else {
-			include 'head.html';
-		}
-        $connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
-        mysql_select_db("nhahang",$connection);
-        $sql = "select * from khaivi"; // chon du lieu de in mon khai vi
-        $result = mysql_query($sql);
+			session_start();
+			if(isset($_SESSION['name']) && $_SESSION['level'] == 1){
+				include 'head_admin.html';
+			}
+			else if(isset($_SESSION['name']) && $_SESSION['level'] == 2){
+				include 'head_user.html';
+			}
+			else {
+				include 'head.html';
+			}
+			$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
+			mysql_select_db("nhahang",$connection);
+			$sql = "select * from khaivi"; // chon du lieu de in mon khai vi
+			$result = mysql_query($sql);
         ?>
         <style type="text/css">
         <!--
         .style2 {
-	       font-size: 36px;
-	       color: #FF0000;
+			font-family: Verdana;
+			font-size: 36px;
+			color: #CC0000;
         }
         -->
         </style>
         <br><br><br><br>
         <div align="center"</div>
         <table width="449" border="1" >
-            <CAPTION><span class="style2">MENU</span></CAPTION>
+            <div class="style2">THỰC ĐƠN</div>
+			<br>
             <tr align="center" valign="middle">
                 <td width="51" height="25"><div align="center">STT</div></td>
-                <td width="211"><div align="center">Name</div></td>
-                <td width="165"><div align="center">Price</div></td>
+                <td width="211"><div align="center">Tên món</div></td>
+                <td width="165"><div align="center">Giá tiền (VNĐ)</div></td>
             </tr>
             <tr>
             	<td colspan="3" height="25"><div align="center">Khai vị</div><td>
@@ -107,13 +109,13 @@
 	   ?>
        
        
-        <?php
+       <?php
 		//in mon trang mieng
 	   $sql = "select * from desert";
        $result = mysql_query($sql);
 	   ?>      
         <tr>
-            <td colspan="3" height="25"><div align="center">Desert</div><td>
+            <td colspan="3" height="25"><div align="center">Tráng miệng</div><td>
         </tr>
 		<?php
         while($data=mysql_fetch_assoc($result)){
@@ -134,6 +136,6 @@
         <?php
 			mysql_close($connection);
 			include 'end.html';
-	?>
+		?>
 	</body>
 </html>
