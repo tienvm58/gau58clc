@@ -2,7 +2,7 @@
 ﻿
 Đề tài 5: Nhà hàng.
 
-Link mã nguồn: https://github.com/tienvm58/gau58clc
+PROJECT CHÍNH ĐƯỢC ĐẶT Ở FORDER "GAU_CLC". 
 
 Các thành viên (5):
 
