@@ -38,18 +38,18 @@
 			$_SESSION['level'] = $row['level'];
 				
 			if($query->num_rows == 0) {
-				echo "<h3> Username or password is not correct, please try again.<br> reloading... </h3>";
+				echo "<h3> Tên đăng nhập hoặc mật khẩu không chính xác. Hãy thử lại!</h3>";
 				echo '<meta http-equiv="refresh" content="2; url=dangnhap.php">';
 			}
 			else if(isset($_SESSION['name']) && $_SESSION['level'] == 2)
 			{
-				echo "<br><b>Đăng nhập thành công</b><br><b>Chờ một chút trình duyệt sẽ tự chuyển</b>";
+				echo "<br><h3>Đăng nhập thành công</b><br><b>Chờ một chút trình duyệt sẽ tự chuyển</h3>";
 				
 				echo '<meta http-equiv="refresh" content="2; url=Code_user.php">';
 			}
 			else if(isset($_SESSION['name']) && $_SESSION['level'] == 1)
 			{
-				echo "<br><b>Đăng nhập thành công</b><br><b>Chờ một chút trình duyệt sẽ tự chuyển</b>";
+				echo "<br><h3>Đăng nhập thành công</b><br><b>Chờ một chút trình duyệt sẽ tự chuyển</h3>";
 				
 				echo '<meta http-equiv="refresh" content="2; url=Code_admin.php">';
 			}

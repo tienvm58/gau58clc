@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+	<head> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="author" content="GallerySoft.info" />
+    		<link rel="stylesheet" href="style.css" type="text/css" />
+		<title> Góp ý </title>
+	</head>
+	<body>
 	<?php
 		include 'head_admin.html'
 	?>
@@ -13,9 +20,9 @@
 		$data= mysql_fetch_assoc($query);
 		echo "<br><br><br>";
 		echo"<div align='center'>";
-		echo"<table border='1' align='center' weight='1000' height='200'>";
+		echo"<table border='1' align='center' weight='1000' height='200' >";
 		echo "<tr class='tit'>";
-			echo"<td>Username</td>";
+			echo"<td>Tên</td>";
 			echo"<td>Góp ý</td>";
 		echo "</tr>";
 		while($data=mysql_fetch_assoc($query)){
@@ -32,5 +39,5 @@
 			include 'end.html';
 		?>
 	</div>
-	
+	</body>
 </html>

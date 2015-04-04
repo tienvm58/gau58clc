@@ -1,4 +1,3 @@
-
 <?php
 	$localhost ="localhost";
 	$name="root";
@@ -20,18 +19,17 @@
 	}
 	if($_POST["usname"] == null){
 		echo "<br><br><br><br><b>BẠN CHƯA NHẬP SỐ BÀN CỦA MÌNH. XIN MỜI BẠN NHẬP THÔNG TIN ĐỂ TIẾP TỤC...</b><br>";
-		echo '<meta http-equiv="refresh" content="2; url=gyuser.php">';
+		echo '<meta http-equiv="refresh" content="2; url=gopy_user.php">';
 	}else{
 		$u= $_POST["usname"];
 		echo "<br><br><br>CẢM ƠN BẠN ĐÃ ĐÓNG GÓP Ý KIẾN CỦA MÌNH ĐỂ GIÚP ĐỠ NHÀ HÀNG PHÁT TRIỂN HƠN!";
-		echo '<meta http-equiv="refresh" content="2; url=gyuser.php">';
+		echo '<meta http-equiv="refresh" content="2; url=gopy_user.php">';
 	}
 	if($u && $g){
 		$sql= "insert into gopy(username,gopy) value('$u','$g')";
 		mysql_query($sql);
-		echo '<meta http-equiv="refresh" content="2; url=gyuser.php">';
+		echo '<meta http-equiv="refresh" content="2; url=gopy_user.php">';
 		
 	}
-
 	
 ?>

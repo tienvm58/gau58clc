@@ -199,15 +199,15 @@ td{
 			
 .tit{
 	color: white;
-	background: red;
+	background: #CC0000;
 	font-weight: bold;
 	font-size: 20;
 }
 
 .gopy table{
-	border-color: red;
+	border-color: #CC0000;
 	border: 1px solid;
-	
+	text-align: center
 }
 
 .button_action{
