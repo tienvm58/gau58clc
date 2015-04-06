@@ -42,3 +42,15 @@ User story:
 
 	4. Là người quản trị, tôi muốn website đảm bảo tính bảo mật để thông tin khách hàng được bảo đảm.
 	
+spint 3: góp ý (phản hồi) của khách hàng
+
+Link demo: https://www.youtube.com/watch?v=dEcfhev3jGM&feature=youtu.be
+User story:
+	1. Là người quản trị viên, tôi muốn nhận được những ý kiến của đánh giá của khách hàng về nhà hàng của mình
+	2. Là người quản trị viên, tôi muốn những góp ý của khách hàng để vào một mục riêng
+	3. Là người quản trị viên, tôi muốn bảo mật những góp ý của khách hàng và chỉ mình tôi có thể quản lý chúng
+	4. Là người quản trị viên, tôi muốn biết những góp ý được gửi đến là của ai
+	5. Là người khách hàng, tôi muốn phản hồi những đánh giá của mình tới chủ cửa hàng
+	6. Là người khách hàng, tôi muốn đảm bảo thông tin cá nhân khi muốn phản hồi những đánh giá của mình tới chủ cửa hàng
+	7. Là người khách hàng, tôi muốn phản hồi tới chủ cửa hàng nhưng ẩn danh
+	8. Là người khách hàng đã góp ý cho cửa hàng, tôi muốn biết suy nghĩ của chủ cửa hàng về những góp ý đấy
