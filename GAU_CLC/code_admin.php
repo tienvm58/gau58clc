@@ -12,7 +12,7 @@
 		<style type="text/css">
         <!--
         .style2 {
-	       color: #FF0000;
+	       color: #CC0000;
 	       font-weight: bold;
 	       font-size: 18px;
         }

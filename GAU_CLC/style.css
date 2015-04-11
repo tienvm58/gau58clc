@@ -10,8 +10,9 @@ li {
 }
 
 body {
-	background: url(image/Background.png) no-repeat fixed;
+	background: #fbfbfb;
 	font: 15px Arial;
+	
 }
 
 div {
@@ -59,10 +60,10 @@ div {
     position: absolute;
     background: url(image/tab_li.png);
     top:60px;
-    left:0px;
-    width:175px;
+    left:-19px;
+    width:200px;
 	text-align: center;
-	padding: 2px;
+	padding-top: 3px;
 }
 
 .tab>ul>li:hover ul{ 
@@ -70,7 +71,7 @@ div {
 }
 
 .tab ul li:hover{
-    transition: all 0.25s;
+    transition: all 0.5s;
 }
 
 .tab>ul>li>ul>li{
@@ -89,7 +90,7 @@ div {
 	background-attachment: initial;
 	background-origin: initial;
 	background-clip: initial;
-	background-color: rgb(239,241,239);
+	background-color: #ece7e7;
 	border-radius: 10%;
 	box-shadow: 1px 0px 17px -6px;
 	padding: 40px;
@@ -107,7 +108,7 @@ div {
 	background-attachment: initial;
 	background-origin: initial;
 	background-clip: initial;
-	background-color: rgb(239,241,239);
+	background-color: #ece7e7;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
 	padding: 45px;
@@ -126,7 +127,7 @@ div {
 	background-attachment: initial;
 	background-origin: initial;
 	background-clip: initial;
-	background-color: rgb(239,241,239);
+	background-color: #ece7e7;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
 	padding: 45px;
@@ -144,13 +145,13 @@ div {
 	background-attachment: initial;
 	background-origin: initial;
 	background-clip: initial;
-	background-color: rgb(239,241,239);
+	background-color: #ece7e7;
 	border-radius: 10%;
 	box-shadow: 1px 0px 22px -6px;
-	padding: 40px;
+	padding: 60px;
 	text-align: left;
-	font-family: Calibri;
-	font-size: 16px;
+	font-family: Tahoma;
+	font-size: 14px;
 }
 
 fieldset.frm-set{
@@ -212,8 +213,55 @@ td{
 
 .button_action{
 	height: auto;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 3px;
-	padding-bottom: 3px;
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #ece7e7;
+	box-shadow: 1px 1px 9px -5px;
+}
+
+.menu{
+	font-family: Verdana;
+	font-size: 36px;
+	color: #db0c0c;
+	text-align: center;
+	background: #ece7e7;
+}
+
+.frame_menu{
+	text-align: center;
+	box-shadow: 1px 0px 22px -6px;
+	margin-left: 12.5%;
+}
+
+.frame_order{
+	text-align: center;
+	box-shadow: 1px 0px 22px -6px;
+	margin-left: 12.5%;
+}
+
+.purchase_orders{
+	font-family: Verdana;
+	font-size: 26px;
+	color: #db0c0c;
+	text-align: center;
+	background: #ece7e7;
+}
+
+.contact{
+	font-family: Tahoma;
+	font-size: 16px;
+	text-align:justify;
+	margin-left: 12.5%;
+	margin-right: 12.3%;
+	width: 905px;
+	line-height: 35px;
+	background-color: #f2ebeb;
+	border-radius: 10%;
+	box-shadow: 1px 0px 22px -6px;
+	padding-top: 85px;
+	padding-bottom: 85px;
+	padding-left: 50px;
+	padding-right: 50px;
 }

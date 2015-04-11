@@ -16,16 +16,10 @@
        		<ul>
 					<li><a href="Code.php">Trang chủ</a></li>
            			<li><a href="menu.php">Thực đơn</a></li>
-           			<li><a href="dangnhap.php">Đặt hàng</a></li>
-					<li><a href="#">Quản lý</a>
-					<ul>
-						<li><a href="dangnhap.php">Thêm món</a></li>
-						<li><a href="dangnhap.php">Xóa món</a></li>
-						<li><a href="dangnhap.php">Thêm bàn</a></li>
-						<li><a href="dangnhap.php">Xóa bàn</a></li>
-					</ul>
-           			<li><a href="#">Liên hệ</a></li>
+           			<li><a href="dangnhap.php">Đặt món</a></li>
+           			<li><a href="contact.php">Liên hệ</a></li>
            			<li><a href="dangnhap.php">Góp ý</a></li>
+					<li><a href="#">Sự kiện</a></li>
        		</ul>
     
 		</div>
@@ -33,7 +27,7 @@
         <style type="text/css">
         <!--
         .style2 {
-	       color: #FF0000;
+	       color: #CC0000;
 	       font-weight: bold;
 	       font-size: 18px;
         }
