@@ -1,28 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<title> Welcome to Gấu's Restaurant </title>
 		<meta name="author" content="GallerySoft.info" />
     		<link rel="stylesheet" href="style.css" type="text/css" />
-		<title>	Welcome to Gấu's restaurant	</title>
+		<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+		<script type="text/javascript" src="jquery.flexisel.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<script type="text/javascript" src="js/bootstrap.js"></script>
 	</head>
 		
 	<body>
 		<?php
-			include 'TopBar.html';
+			include 'head.html';
 		?>
 		
-    	<div class="tab" >
-       		<ul>
-					<li><a href="Code.php">Trang chủ</a></li>
-           			<li><a href="menu.php">Thực đơn</a></li>
-           			<li><a href="dangnhap.php">Đặt món</a></li>
-           			<li><a href="contact.php">Liên hệ</a></li>
-           			<li><a href="dangnhap.php">Góp ý</a></li>
-					<li><a href="#">Sự kiện</a></li>
-       		</ul>
-    
-		</div>
 		
         <style type="text/css">
         <!--
@@ -34,49 +30,31 @@
         -->
         </style>
 		<br><br><br><br>
-        <div align = "center">
-        <table width="994" height="100" border="1">
-        <tr>
-            <td><div align="center">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-			<p class="style2">
-				<?php
-							echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
+		<div class = "container">
+			<div align = "center">
+			<table width="1014" height="100" border="1" class = "table1">
+			<tr>
+				<td><div align="center">
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p class="style2">
+					<?php
+						echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
 						
-				?>
-			</p>
-            </div>
-            <p align="center">&nbsp;</p></td>
-        </tr>
-        </table>
-        
+					?>
+				</p>
+				</div>
+				<p align="center">&nbsp;</p></td>
+			</tr>
+			</table>
+		</div>
         
         
 		
 		<br><br><br><br><br><br>
 		<div align = "center">
-		<table cellspacing = "20" border = "0">
-			<tr>
-				<div align = "center">
-				<table border = "1px" width = "994px" height = "100px" align = "center" cellspacing = "5px">
-					<tr>
-						<br><br><br>
-						<td><div align = "left"> 
-							<ul>
-								<li> <img src = "Image/footer.png " width = "100px" height = "100px"> </li>
-							</ul>
-						</div></td>
-						<td><div align = "center-leftright">
-							<ul>
-								<li> Địa chỉ: 144 Xuân Thủy, Cầu Giấy, Hà Nội </li>
-								<li> Điện thoại: 0912345678 </li>
-								<li> Facebook:<li>
-							</ul>
-						</div></td>
-						</tr>
-				</table>
-			</tr>
-		</table>	
+		<?php
+			include 'end.html';
+		?>
 	</body>
 </html>

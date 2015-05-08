@@ -9,52 +9,39 @@ li {
     list-style: none;
 }
 
-body {
-	background: #fbfbfb;
-	font: 15px Arial;
-	
-}
-
 div {
 	display: block;
 }
 
-.banner{
-    width: 1014px;
-    height:335px;
-    background: url(image/Banner.png) no-repeat;
-    margin-top: 0px auto;
-    margin:  0px auto;
+.carousel{
+	margin-left: 6%;
 }
 
-.tab a{
-    text-decoration: none;
-    color: #fff;
-}
-
-.tab{
-    width:1050px; 
+.tabs{
+    width:1014px; 
     height: 88px;
     background: url(image/tab.png) no-repeat;
     margin: 0px auto;
-    margin-top: -1px;
-	margin-left: 12.5%;
-	margin-right: 12.5%;
+	margin-top: -1px;
+	margin-left: -7%;
+	margin-right: 5%;
 	padding: 6px 8px;
+	
 }
 
-.tab>ul>li{
+.tabs>ul>li{
     float: left;
-    padding: 21px 56px;
+    padding: 21px 58px;
     position: relative;
 	text-align: center;
+	margin-left: -1%;
 }
 
-.tab>ul>li:last-child:last-child{
+.tabs>ul>li:last-child:last-child{
     border-right: none;
 }
 
-.tab>ul>li>ul{
+.tabs>ul>li>ul{
 	margin-bottom: -5px;
     display: none;
     position: absolute;
@@ -66,31 +53,24 @@ div {
 	padding-top: 3px;
 }
 
-.tab>ul>li:hover ul{ 
+.tabs>ul>li:hover ul{ 
     display: block;
 }
 
-.tab ul li:hover{
+.tabs ul li:hover{
     transition: all 0.5s;
 }
 
-.tab>ul>li>ul>li{
+.tabs>ul>li>ul>li{
     padding: 19px 61.4px;
 }
 
 .login_board {
 	width: 200px;
 	line-height: 30px;
-	margin-left: 51%;
+	margin-left: 38%;
 	margin-right: 50%;
-	background-image: initial;
-	background-position: initial;
-	background-size: initial;
-	background-repeat: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #ece7e7;
+	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 17px -6px;
 	padding: 40px;
@@ -101,14 +81,7 @@ div {
 	width: 350px;
 	line-height: 30px;
 	margin-left: 44.5%;
-	background-image: initial;
-	background-position: initial;
-	background-size: initial;
-	background-repeat: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #ece7e7;
+	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
 	padding: 45px;
@@ -119,15 +92,9 @@ div {
 	width: 400px;
 	height: auto;
 	line-height: 30px;
-	margin-left: 27.7%;
-	background-image: initial;
-	background-position: initial;
-	background-size: initial;
-	background-repeat: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #ece7e7;
+	margin-left: 5%;
+	margin-rigth: 5%;
+	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
 	padding: 45px;
@@ -138,14 +105,7 @@ div {
 	width: 600px;
 	line-height: 35px;
 	margin-left: 24%;
-	background-image: initial;
-	background-position: initial;
-	background-size: initial;
-	background-repeat: initial;
-	background-attachment: initial;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #ece7e7;
+	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 22px -6px;
 	padding: 60px;
@@ -170,11 +130,6 @@ dd{
 	display: block;
 }
 
-.forgot_pass a{
-	text-decoration: underline;
-	text-align: center;	
-}
-
 .info_footer{
 	font-family: Blackletter;
 	font-size: 16px;
@@ -192,12 +147,15 @@ table {
 }
 			
 td{
-	border: 1px solid #CC0000;
 	text-align: left;
 	padding: 2px;
 	margin-left: 5px;
 }
-			
+	
+.table1{
+	border-color: red;
+}
+	
 .tit{
 	color: white;
 	background: #CC0000;
@@ -264,4 +222,15 @@ td{
 	padding-bottom: 85px;
 	padding-left: 50px;
 	padding-right: 50px;
+}
+
+.navbar-right{
+	float: right;
+	margin-top: 1%;
+}
+
+.text1{
+	font-size: 35px;
+	color: #60483b;
+	text-align: center;
 }

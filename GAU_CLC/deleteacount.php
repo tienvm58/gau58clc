@@ -54,15 +54,16 @@
         -->
         </style>
         <br><br><br><br>
-        <div align="center"</div>
-        <table width="449" border="1" >
-            <CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN</span></CAPTION>
-            <tr align="center" valign="middle">
-                <td width="211"><div align="center">Tên đăng nhập</div></td>
-                <td width="165"><div align="center">Mật khẩu</div></td>
-				<td width="165"><div align="center">Level</div></td>
-            </tr>
-            
+		<div class = "container">
+			<div class = "row">
+				<div class = "table table-hover table-striped">
+					<thead>
+						<th width="211"> Tên đăng nhập</th>
+						<th width="165">Mật khẩu</th>
+						<th width="165">Level</th>
+					</thead>
+        </div>    
+			
         <?php
         while($data=mysql_fetch_assoc($result)){
         ?>
@@ -79,23 +80,23 @@
 	
 	
 	
-		<br>
-		
-		<form name="formdelacc" action="#" method="post">
-			<fieldset class = "frm-set">
-				<legend></legend>
-				<div class = "account_action"><b>
-					<div align = "center"> <h2>Nhập tài khoản bạn muốn xóa</h2> </div> 
+		<br><br>
+		<div class = "container">
+			<form name="formdelacc" action="#" method="post" class = "navbar-form">
+				<div class = "account_action">
+					<div align = "center"> <h3>Nhập tài khoản bạn muốn xóa</h3> </div> 
 					<br>
-					<label  for="name">Tên đăng nhập:</label>
-					<input width = "100%" type="text" name="delname" maxlength = "25" placeholder="Username" required/>
-					<br>
-					<label  for="password">Mật khẩu:</label>
-					<input width = "100%" type="text" name="delpass" maxlength = "25" placeholder="Password" required />
-					<br><br>
-					<div align = "center"><input type="submit" name="delacc" value="Xóa" maxlength = "25" class = "button_action"/></div>
-				</b></div>
-		</form>
+					<div class = "form-group">
+						<label  for="name"><b>Tên đăng nhập:</b></label>
+						<input width = "100%" type="text" name="delname" maxlength = "25" placeholder="Tên đăng nhập" required/>
+						<br>
+						<label  for="password"><b>Mật khẩu:</b></label>
+						<input width = "100%" type="text" name="delpass" maxlength = "25" placeholder="Mật khẩu" required />
+						<br><br>
+						<div align = "center"><input type="submit" name="delacc" value="Xóa" maxlength = "25" class = "btn"/></div>
+					</div>
+			</form>
+		</div>
 		
 		<?php
 			include 'end.html';

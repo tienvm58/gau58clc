@@ -14,6 +14,40 @@
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 	</head>
 	<body>
+		<nav class = "nav navbar-nav navbar-inner navbar-static-top">
+			<div class="container">
+				<span>
+					<a href = "Code.php">
+						<img src = "image/logoGau_header.png" width = "100" height = "40" title = "Gấu Restaurant"/>	
+					</a>	
+				</span>
+				<!-- Follow on netwrk social -->
+				<span class="brand" href="#">
+					<img src = "image/fb_ico.png" href = "#" width = "30" height = "30" alt = "Follow us on Facebook"  title = "Theo dõi chúng tôi trên Facebook"/>
+					<img src = "image/twitter_ico.png" href = "#" width = "30" height = "30" alt = "Follow us on Twitter"  title = "Theo dõi chúng tôi trên Twitter"/>
+					<img src = "image/insta_ico.png" href = "#" width = "30" height = "30" alt = "Follow us on Instagram"  title = "Theo dõi chúng tôi trên Instagram"/>
+				</span>
+				
+				<ul class = "nav nabar-nav navbar-right">
+					<form name="formlogin" action="checklogin.php" method="post">
+					<span>
+					<input type = "text" tabindex = "1" name = "name" id = "username" size = "25" maxlength = "40" placeholder = "Tên đăng nhập" class = "span2" required/>
+					</span>
+					<span>
+					<input type = "password" tabindex = "2" name = "pass" id = "password" size = "25" maxlength = "25" placeholder = "Mật khẩu" class = "span2" required/>
+					</span>
+					<span for = "autologin" id = "lbl_autologin">
+						<input type = "checkbox" name = "autologin" id = "autologin" tabindex = "4" class = "checkbox" checked = "uncheck">
+						Ghi nhớ
+					</span>
+						<input type="submit" name = "submit" class="btn" value = "Đăng nhập" />
+					</form>
+				</ul>
+
+			</div>
+			</div>
+		</nav>
+		
 		<div class="container""> 
 
 			<div id="myCarousel" class="carousel slide">

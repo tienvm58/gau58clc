@@ -73,7 +73,7 @@ html {
 
 a:focus {
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 5px auto -webkit-focus-ring-color
   outline-offset: -2px;
 }
 
@@ -178,7 +178,7 @@ textarea {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
   a[href]:after {
     content: " (" attr(href) ")";
@@ -227,18 +227,18 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #F6F7FA;
 }
 
 a {
-  color: #0088cc;
+  color: #fff;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #005580;
-  text-decoration: underline;
+  color: #fff;
+  text-decoration: none;
 }
 
 .img-rounded {
@@ -2002,7 +2002,7 @@ table {
 }
 
 .table {
-  width: 100%;
+  width: 60%;
   margin-bottom: 20px;
 }
 
