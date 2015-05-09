@@ -34,6 +34,7 @@
                 else if($price==NULL and $ten_mon==NULL)
                     echo $no_info;
 				else {
+		$sql= mysql_query("insert into menu VALUE ('','".$ten_mon."','".$price."','".$type."')");
                 if($type == "1"){
                     $sql= mysql_query("insert into khaivi VALUE ('','".$ten_mon."','".$price."')");
                     if($sql)
