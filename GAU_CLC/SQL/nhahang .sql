@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2015 at 12:06 PM
+-- Generation Time: May 09, 2015 at 02:01 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -21,49 +21,6 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `nhahang` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `nhahang`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `desert`
---
-
-CREATE TABLE IF NOT EXISTS `desert` (
-  `STT` int(2) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(10) NOT NULL,
-  PRIMARY KEY (`STT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `desert`
---
-
-INSERT INTO `desert` (`STT`, `Name`, `Price`) VALUES
-(1, 'Orange', 20000),
-(2, 'Apple', 20000),
-(3, 'dÆ°a chuá»™t', 10000);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `drink`
---
-
-CREATE TABLE IF NOT EXISTS `drink` (
-  `STT` int(2) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(30) NOT NULL,
-  `Price` int(10) NOT NULL,
-  PRIMARY KEY (`STT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `drink`
---
-
-INSERT INTO `drink` (`STT`, `Name`, `Price`) VALUES
-(1, 'Orange Juice', 20000),
-(2, 'Water', 15000);
 
 -- --------------------------------------------------------
 
@@ -90,29 +47,6 @@ INSERT INTO `gopy` (`id`, `Time`, `username`, `gopy`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `khaivi`
---
-
-CREATE TABLE IF NOT EXISTS `khaivi` (
-  `STT` int(2) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(10) NOT NULL,
-  PRIMARY KEY (`STT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
-
---
--- Dumping data for table `khaivi`
---
-
-INSERT INTO `khaivi` (`STT`, `Name`, `Price`) VALUES
-(1, 'Salad', 25000),
-(2, 'Soup', 100000),
-(3, 'trá»©ng saber', 10000),
-(4, 'trá»©ng chiÃªn', 12000);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `menu`
 --
 
@@ -122,51 +56,26 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `Price` int(10) NOT NULL,
   `Value` int(2) NOT NULL,
   PRIMARY KEY (`STT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `menu`
 --
 
 INSERT INTO `menu` (`STT`, `Name`, `Price`, `Value`) VALUES
-(1, 'Salad', 25000, 1),
 (2, 'Soup', 100000, 1),
 (3, 'trá»©ng saber', 10000, 1),
 (4, 'trá»©ng chiÃªn', 12000, 1),
 (8, 'Chicken', 200000, 2),
-(9, 'Beef', 300000, 2),
-(10, 'láº¡p xÆ°á»ng', 30000, 2),
 (11, 'mÃµm lá»£n', 30000, 2),
 (12, 'GÃ  háº§m', 300000, 2),
-(15, 'Orange Juice', 20000, 3),
+(15, 'Orange Juice', 10000, 3),
 (16, 'Water', 15000, 3),
-(18, 'Orange', 20000, 4),
+(18, 'Orange', 5000, 4),
 (19, 'Apple', 20000, 4),
-(20, 'dÆ°a chuá»™t', 10000, 4);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `monchinh`
---
-
-CREATE TABLE IF NOT EXISTS `monchinh` (
-  `STT` int(2) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(10) NOT NULL,
-  PRIMARY KEY (`STT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
-
---
--- Dumping data for table `monchinh`
---
-
-INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
-(1, 'Chicken', 200000),
-(2, 'Beef', 300000),
-(3, 'láº¡p xÆ°á»ng', 30000),
-(4, 'mÃµm lá»£n', 30000),
-(5, 'GÃ  háº§m', 300000);
+(20, 'dÆ°a chuá»™t', 10000, 4),
+(21, 'Peppsi', 10000, 3),
+(22, 'Báº¯p rang', 50000, 1);
 
 -- --------------------------------------------------------
 
@@ -222,7 +131,7 @@ INSERT INTO `user` (`name`, `pass`, `level`) VALUES
 ('admin', 'admin', 1),
 ('ban1', 'ban1', 2),
 ('ban2', 'ban2', 2),
-('phan', 'anh', 0);
+('ban3', 'ban3', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
