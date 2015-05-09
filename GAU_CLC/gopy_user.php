@@ -15,8 +15,6 @@
 		<form name="gopyus" action="gopyuser.php" method="post" >
 			<div class = "comment">
 				<h2>Nhận xét của bạn về chất lượng của nhà hàng </h2><br>
-				<b>Tên của bạn</b><br>
-				<input width = "100%" type="text" name="usname" size = "25" maxlength = "25" required/> <br><br>
 				<br><b>Nhận xét của bạn </b><br>
 				<textarea rows = "8" cols = "60" name="gopy" class = "box_gopy" id="gopy" required/></textarea>
 				<br><br>

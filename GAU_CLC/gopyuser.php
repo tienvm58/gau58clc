@@ -7,7 +7,7 @@
 	$con = mysql_connect($localhost, $name, $pass);
 	mysql_select_db($dbname,$con);
 	header("content-type:text/html;charset=utf-8");
-	$u=$g="";
+	$t=$u=$g="";
 	
 	if($_POST["gopy"] == null){
 		echo "<br><b>BẠN CHƯA NHẬP Ý KIẾN. XIN MỜI BẠN NHẬP Ý KIẾN CỦA MÌNH...</b><br>";
@@ -17,19 +17,20 @@
 		$g= $_POST["gopy"];
 		
 	}
-	if($_POST["usname"] == null){
-		echo "<br><br><br><br><b>BẠN CHƯA NHẬP SỐ BÀN CỦA MÌNH. XIN MỜI BẠN NHẬP THÔNG TIN ĐỂ TIẾP TỤC...</b><br>";
-		echo '<meta http-equiv="refresh" content="2; url=gopy_user.php">';
-	}else{
-		$u= $_POST["usname"];
-		echo "<br><br><br>CẢM ƠN BẠN ĐÃ ĐÓNG GÓP Ý KIẾN CỦA MÌNH ĐỂ GIÚP ĐỠ NHÀ HÀNG PHÁT TRIỂN HƠN!";
-		echo '<meta http-equiv="refresh" content="2; url=gopy_user.php">';
-	}
-	if($u && $g){
-		$sql= "insert into gopy(username,gopy) value('$u','$g')";
+	session_start();
+	if(isset($_SESSION['name']))
+		$u = $_SESSION['name'];
+	else
+		$u = "Người lạ";	
+	echo "<br><br><br>CẢM ƠN BẠN ĐÃ ĐÓNG GÓP Ý KIẾN CỦA MÌNH ĐỂ GIÚP ĐỠ NHÀ HÀNG PHÁT TRIỂN HƠN!";
+	
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+	$t = date('d/m/Y H:i:s');
+	if($u && $g && $t){
+		$sql= "insert into gopy(username,gopy,Time) value('$u','$g','$t')";
 		mysql_query($sql);
 		echo '<meta http-equiv="refresh" content="2; url=gopy_user.php">';
-		
 	}
+	
 	
 ?>

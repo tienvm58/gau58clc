@@ -2,10 +2,10 @@
 -- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Client: 127.0.0.1
--- Généré le: Sam 14 Mars 2015 à 01:31
--- Version du serveur: 5.6.11
--- Version de PHP: 5.5.3
+-- Host: 127.0.0.1
+-- Generation Time: May 09, 2015 at 03:22 AM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `nhahang`
+-- Database: `nhahang`
 --
 CREATE DATABASE IF NOT EXISTS `nhahang` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `nhahang`;
@@ -25,7 +25,7 @@ USE `nhahang`;
 -- --------------------------------------------------------
 
 --
--- Structure de la table `desert`
+-- Table structure for table `desert`
 --
 
 CREATE TABLE IF NOT EXISTS `desert` (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `desert` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Contenu de la table `desert`
+-- Dumping data for table `desert`
 --
 
 INSERT INTO `desert` (`STT`, `Name`, `Price`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `desert` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `drink`
+-- Table structure for table `drink`
 --
 
 CREATE TABLE IF NOT EXISTS `drink` (
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `drink` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `drink`
+-- Dumping data for table `drink`
 --
 
 INSERT INTO `drink` (`STT`, `Name`, `Price`) VALUES
@@ -68,29 +68,29 @@ INSERT INTO `drink` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `gopy`
+-- Table structure for table `gopy`
 --
 
 CREATE TABLE IF NOT EXISTS `gopy` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
+  `Time` varchar(30) NOT NULL,
   `username` varchar(15) NOT NULL,
   `gopy` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
--- Contenu de la table `gopy`
+-- Dumping data for table `gopy`
 --
 
-INSERT INTO `gopy` (`id`, `username`, `gopy`) VALUES
-(1, 'u', 'g'),
-(2, 'u', 'g'),
-(3, 'bÃ n 1', 'chÃºng tÃ´i cáº£m tháº¥y hÃ´m nay Ä‘á»“ Äƒn khÃ´ng ngon');
+INSERT INTO `gopy` (`id`, `Time`, `username`, `gopy`) VALUES
+(9, '09/05/2015 08:16:04', 'ban1', 'abc'),
+(10, '09/05/2015 08:19:26', 'ban1', 'zyz');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `khaivi`
+-- Table structure for table `khaivi`
 --
 
 CREATE TABLE IF NOT EXISTS `khaivi` (
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `khaivi` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Contenu de la table `khaivi`
+-- Dumping data for table `khaivi`
 --
 
 INSERT INTO `khaivi` (`STT`, `Name`, `Price`) VALUES
@@ -113,7 +113,7 @@ INSERT INTO `khaivi` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `monchinh`
+-- Table structure for table `monchinh`
 --
 
 CREATE TABLE IF NOT EXISTS `monchinh` (
@@ -121,10 +121,10 @@ CREATE TABLE IF NOT EXISTS `monchinh` (
   `Name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Price` int(10) NOT NULL,
   PRIMARY KEY (`STT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Contenu de la table `monchinh`
+-- Dumping data for table `monchinh`
 --
 
 INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
@@ -137,7 +137,79 @@ INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `offer`
+--
+
+CREATE TABLE IF NOT EXISTS `offer` (
+  `Time` int(30) NOT NULL,
+  `User` text NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `Price` int(4) NOT NULL,
+  `Qty` int(3) NOT NULL,
+  `Money` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `offer`
+--
+
+INSERT INTO `offer` (`Time`, `User`, `Name`, `Price`, `Qty`, `Money`) VALUES
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', 'Soup', 100000, 0, 0),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', 'Soup', 100000, 2, 200000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', 'Soup', 100000, 2, 200000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', '', 0, 0, 0),
+(0, 'ban1', '', 0, 0, 0),
+(0, 'ban1', '', 0, 0, 0),
+(2015, 'cuongnb', 'abc', 1000, 3, 3000),
+(0, 'ban1', '', 0, 0, 0),
+(0, 'ban1', '', 0, 0, 0),
+(0, 'ban1', '', 0, 0, 0),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(2015, 'cuong', 'avc', 1222, 1, 1222),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
+(0, 'ban1', 'Soup', 100000, 23, 2300000),
+(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
+(0, 'ban1', 'Soup', 100000, 2, 200000),
+(0, 'ban1', 'trá»©ng saber', 10000, 2, 20000),
+(0, 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
+(1431106369, 'ban1', 'Soup', 100000, 2, 200000),
+(1431106369, 'ban1', 'trá»©ng saber', 10000, 2, 20000),
+(1431106369, 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
@@ -148,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`name`, `pass`, `level`) VALUES

@@ -8,7 +8,16 @@
 	</head>
 	<body>
 		<?php
-			include 'head_user.html';
+			session_start();
+			if(isset($_SESSION['name']) && $_SESSION['level'] == 1){
+				include 'head_admin.html';
+			}
+			else if(isset($_SESSION['name']) && $_SESSION['level'] == 2){
+				include 'head_user.html';
+			}
+			else {
+				include 'head.html';
+			}
 		?>
 		<br><br><br><br><br>
 		<div class = "contact">
