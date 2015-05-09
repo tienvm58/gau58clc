@@ -13,28 +13,21 @@ div {
 	display: block;
 }
 
-.carousel{
-	margin-left: 6%;
-}
-
 .tabs{
     width:1014px; 
     height: 88px;
     background: url(image/tab.png) no-repeat;
     margin: 0px auto;
-	margin-top: -1px;
-	margin-left: -7%;
-	margin-right: 5%;
 	padding: 6px 8px;
-	
+	margin-left: -4%;
+	margin-right: 0%;
 }
 
 .tabs>ul>li{
     float: left;
-    padding: 21px 58px;
+    padding: 20px 54px;
     position: relative;
 	text-align: center;
-	margin-left: -1%;
 }
 
 .tabs>ul>li:last-child:last-child{
@@ -47,7 +40,7 @@ div {
     position: absolute;
     background: url(image/tab_li.png);
     top:60px;
-    left:-19px;
+    left:-32%;
     width:200px;
 	text-align: center;
 	padding-top: 3px;
@@ -92,8 +85,8 @@ div {
 	width: 400px;
 	height: auto;
 	line-height: 30px;
-	margin-left: 5%;
-	margin-rigth: 5%;
+	margin-left: 7%;
+	margin-right: 5%;
 	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
@@ -131,9 +124,10 @@ dd{
 }
 
 .info_footer{
-	font-family: Blackletter;
+	float: right;
+	font-family: Calibri Blackletter;
 	font-size: 16px;
-	text-align: left;
+	text-align: justify;
 }
 
 .check_login{
@@ -233,4 +227,8 @@ td{
 	font-size: 35px;
 	color: #60483b;
 	text-align: center;
+}
+
+.table2{
+	color: #f7f7f7
 }

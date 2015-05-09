@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 		<title> Welcome to Gấu's Restaurant </title>
 		<meta name="author" content="GallerySoft.info" />
     		<link rel="stylesheet" href="style.css" type="text/css" />
@@ -30,7 +30,7 @@
         -->
         </style>
 		<br><br><br><br>
-		<div class = "container">
+	<!--	<div class = "container">-->
 			<div align = "center">
 			<table width="1014" height="100" border="1" class = "table1">
 			<tr>
@@ -47,12 +47,11 @@
 				<p align="center">&nbsp;</p></td>
 			</tr>
 			</table>
-		</div>
-        
+			</div>
+
         
 		
 		<br><br><br><br><br><br>
-		<div align = "center">
 		<?php
 			include 'end.html';
 		?>
