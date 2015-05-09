@@ -63,3 +63,24 @@ User story:
 	7. Là người khách hàng, tôi muốn phản hồi tới chủ cửa hàng nhưng ẩn danh
 
 	8. Là người khách hàng đã góp ý cho cửa hàng, tôi muốn biết suy nghĩ của chủ cửa hàng về những góp ý đấy
+
+Spint 4: chức năng edit món của người quản lý
+
+.
+
+User story:
+
+	1. Là người quản trị viên, tôi muốn cập nhật thông tin món ăn của cửa hàng để người dùng có thông tin chính xác nhất
+	2. Là người quản trị viên, tôi không muốn thông tin món ăn dễ bị thay đổi bởi khách hàng
+	3. Là người khách hàng, tôi muốn mọi thông tin đến từ cửa hàng sát với thực tế nhất tránh tình trạng giá niêm yết từ tận năm ngoái
+	
+Sprint 5: chức năng đặt món của khách hàng và bàn ăn
+
+.
+
+User story:
+
+	1. Là người quản lý, tôi muốn nhận được đơn đặt hàng của khách hàng qua mạng
+	2. Là người khách hàng, tôi muốn đặt món ăn mà không cần phải chờ phục vụ đến tận nơi để hỏi
+	3. Là người khách hàng, tôi muốn biết cửa hàng có còn bàn ăn nữa không
+	
