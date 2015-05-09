@@ -102,10 +102,11 @@
 		</table>
 			
 		<?php
-			echo "<br><br>";
+			echo "<br><br><br><br>";
 			echo "<input type='submit' name='submit' value='Đặt món'>";
 			if(isset($_POST['submit']))
 			{
+				
 				date_default_timezone_set('Asia/Ho_Chi_Minh');
 				$t = date('d/m/Y H:i:s');
 				$connect=mysql_connect("localhost","root","") or die("Can not connect database");
@@ -118,6 +119,9 @@
 					$add="insert into offer VALUE ('".$t."','".$_SESSION['name']."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
 					mysql_query($add);
 				}
+				echo "<div class='pro'>";
+				echo "<p align='center'>Bạn đã đặt món thành công<br />";
+				echo "</div>";
 			}
 			echo "<div class='pro' align='center'>";
 			echo "<br><br>";

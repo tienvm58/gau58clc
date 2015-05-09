@@ -17,10 +17,6 @@
 		
         </iframe>
 		
-		<br><br><br>
-		<iframe src="purchase_orders.php" width="1014" height="200" frameborder="0" class = "frame_order">
-			
-		</iframe>
 		
 		<div align = "center">
 			<?php
