@@ -82,5 +82,6 @@ User story:
 
 	1. Là người quản lý, tôi muốn nhận được đơn đặt hàng của khách hàng qua mạng
 	2. Là người khách hàng, tôi muốn đặt món ăn mà không cần phải chờ phục vụ đến tận nơi để hỏi
-	3. Là người khách hàng, tôi muốn biết cửa hàng có còn bàn ăn nữa không
+
+
 	
