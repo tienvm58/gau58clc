@@ -1,4 +1,5 @@
 ﻿* thông tin dự án ở file nhom_gau.txt
+* readme.md dùng để hiển thị trong github
 * readme.txt hướng dẫn cách chạy dự án
 * dự án ở trong folder GAU_CLC
 - sử dụng ngôn ngữ HTML, PHP, CSS

@@ -14,7 +14,7 @@ Các thành viên (5):
 
 <<<<<<< HEAD >>>>>>>>
 
-Ngôn ngữ sử dụng: HTML, CSS, JavaScript PHP.
+Ngôn ngữ sử dụng: HTML, CSS, JavaScript, PHP.
 
 Quy trình: scrum (chính xác thì Scrum không phải là một quy trình hay một kĩ thuật cụ  thể  để xây dựng sản phẩm;nó là một khung làm việc cho phép bạn sử dụng nhiều quy trình và kĩ thuật khác nhau.)
 
