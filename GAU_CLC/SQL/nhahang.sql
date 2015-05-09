@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2015 at 03:22 AM
+-- Generation Time: May 09, 2015 at 12:06 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -113,6 +113,40 @@ INSERT INTO `khaivi` (`STT`, `Name`, `Price`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `menu`
+--
+
+CREATE TABLE IF NOT EXISTS `menu` (
+  `STT` int(3) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(50) NOT NULL,
+  `Price` int(10) NOT NULL,
+  `Value` int(2) NOT NULL,
+  PRIMARY KEY (`STT`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`STT`, `Name`, `Price`, `Value`) VALUES
+(1, 'Salad', 25000, 1),
+(2, 'Soup', 100000, 1),
+(3, 'trá»©ng saber', 10000, 1),
+(4, 'trá»©ng chiÃªn', 12000, 1),
+(8, 'Chicken', 200000, 2),
+(9, 'Beef', 300000, 2),
+(10, 'láº¡p xÆ°á»ng', 30000, 2),
+(11, 'mÃµm lá»£n', 30000, 2),
+(12, 'GÃ  háº§m', 300000, 2),
+(15, 'Orange Juice', 20000, 3),
+(16, 'Water', 15000, 3),
+(18, 'Orange', 20000, 4),
+(19, 'Apple', 20000, 4),
+(20, 'dÆ°a chuá»™t', 10000, 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `monchinh`
 --
 
@@ -141,7 +175,7 @@ INSERT INTO `monchinh` (`STT`, `Name`, `Price`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `offer` (
-  `Time` int(30) NOT NULL,
+  `Time` varchar(30) NOT NULL,
   `User` text NOT NULL,
   `Name` varchar(30) NOT NULL,
   `Price` int(4) NOT NULL,
@@ -154,57 +188,18 @@ CREATE TABLE IF NOT EXISTS `offer` (
 --
 
 INSERT INTO `offer` (`Time`, `User`, `Name`, `Price`, `Qty`, `Money`) VALUES
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', 'Soup', 100000, 0, 0),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', 'Soup', 100000, 2, 200000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', 'Soup', 100000, 2, 200000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', '', 0, 0, 0),
-(0, 'ban1', '', 0, 0, 0),
-(0, 'ban1', '', 0, 0, 0),
-(2015, 'cuongnb', 'abc', 1000, 3, 3000),
-(0, 'ban1', '', 0, 0, 0),
-(0, 'ban1', '', 0, 0, 0),
-(0, 'ban1', '', 0, 0, 0),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(2015, 'cuong', 'avc', 1222, 1, 1222),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 10, 120000),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
-(0, 'ban1', 'Soup', 100000, 23, 2300000),
-(0, 'ban1', 'trá»©ng saber', 10000, 12, 120000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 12, 144000),
-(0, 'ban1', 'Soup', 100000, 2, 200000),
-(0, 'ban1', 'trá»©ng saber', 10000, 2, 20000),
-(0, 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
-(1431106369, 'ban1', 'Soup', 100000, 2, 200000),
-(1431106369, 'ban1', 'trá»©ng saber', 10000, 2, 20000),
-(1431106369, 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000);
+('09/05/2015 12:15:28', 'ban1', 'Salad', 25000, 1, 25000),
+('09/05/2015 12:15:28', 'ban1', 'Soup', 100000, 1, 100000),
+('09/05/2015 12:15:28', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
+('09/05/2015 12:16:17', 'ban1', 'Salad', 25000, 1, 25000),
+('09/05/2015 12:16:17', 'ban1', 'Soup', 100000, 1, 100000),
+('09/05/2015 12:16:17', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
+('09/05/2015 16:49:36', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
+('09/05/2015 16:50:36', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
+('09/05/2015 16:50:36', 'ban1', 'GÃ  háº§m', 300000, 1, 300000),
+('09/05/2015 16:52:05', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
+('09/05/2015 16:52:05', 'ban1', 'mÃµm lá»£n', 30000, 1, 30000),
+('09/05/2015 16:52:05', 'ban1', 'GÃ  háº§m', 300000, 1, 300000);
 
 -- --------------------------------------------------------
 
