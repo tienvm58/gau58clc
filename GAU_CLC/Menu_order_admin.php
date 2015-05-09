@@ -9,6 +9,7 @@
 		<?php
 		include 'head_admin.html'
 		?>
+		
 		<?php
 		$conn=mysql_connect("localhost", "root", "") or die("failed");
 		mysql_select_db("nhahang",$conn);
