@@ -20,7 +20,7 @@
 			}
 		?>
 		<br><br><br><br><br>
-		<div class = "contact">
+		<div class = "contact" style = "margin: 0 auto;">
 			Nhà hàng Gấu là tên project môn công nghệ phần mềm của nhóm Gấu - lớp K58CLC - Đại học Công Nghệ - ĐHQGHN. 
 			Project được phát triển bằng quy trình Scrum (chính xác thì Scrum không phải là một quy trình hay một kĩ thuật cụ  thể  để xây dựng sản phẩm, 
 			nó là một khung làm việc cho phép bạn sử dụng nhiều quy trình và kĩ thuật khác nhau), sử dụng ngôn ngữ html, css, php. <br>Nhóm gồm có các thành viên: 
