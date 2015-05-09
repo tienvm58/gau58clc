@@ -13,8 +13,12 @@ div {
 	display: block;
 }
 
-.carousel{
-	margin-left: 6%;
+body{
+	background-color: #e9f1f6;
+    background: -moz-linear-gradient(bottom,#e9f1f6 20%, #f3f5f6 70%);
+    background: -o-linear-gradient(bottom, #e9f1f6 20%, #f3f5f6 70%);
+    background: -ms-linear-gradient(bottom, #e9f1f6 20%, #f3f5f6 70%);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0.2, #e9f1f6),color-stop(0.7, #f3f5f6));
 }
 
 .tabs{
@@ -22,19 +26,16 @@ div {
     height: 88px;
     background: url(image/tab.png) no-repeat;
     margin: 0px auto;
-	margin-top: -1px;
-	margin-left: -7%;
-	margin-right: 5%;
 	padding: 6px 8px;
-	
+	margin-left: -4%;
+	margin-right: 0%;
 }
 
 .tabs>ul>li{
     float: left;
-    padding: 21px 58px;
+    padding: 20px 54px;
     position: relative;
 	text-align: center;
-	margin-left: -1%;
 }
 
 .tabs>ul>li:last-child:last-child{
@@ -47,7 +48,7 @@ div {
     position: absolute;
     background: url(image/tab_li.png);
     top:60px;
-    left:-19px;
+    left:-32%;
     width:200px;
 	text-align: center;
 	padding-top: 3px;
@@ -70,7 +71,7 @@ div {
 	line-height: 30px;
 	margin-left: 38%;
 	margin-right: 50%;
-	background-color: #F5F5F5;
+	background-color: #FAFAFA;
 	border-radius: 10%;
 	box-shadow: 1px 0px 17px -6px;
 	padding: 40px;
@@ -92,8 +93,8 @@ div {
 	width: 400px;
 	height: auto;
 	line-height: 30px;
-	margin-left: 5%;
-	margin-rigth: 5%;
+	margin-left: 7%;
+	margin-right: 5%;
 	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
@@ -104,7 +105,7 @@ div {
 .comment{
 	width: 600px;
 	line-height: 35px;
-	margin-left: 24%;
+	margin-left: 13%;
 	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 22px -6px;
@@ -112,6 +113,16 @@ div {
 	text-align: left;
 	font-family: Tahoma;
 	font-size: 14px;
+}
+
+.intro{
+	width: 820px;
+	line-height: 35px;
+	background-color: #F5F5F5;
+	border-radius: 6%;
+	box-shadow: 1px 0px 22px -6px;
+	padding: 60px;
+	text-align: center;
 }
 
 fieldset.frm-set{
@@ -131,9 +142,19 @@ dd{
 }
 
 .info_footer{
-	font-family: Blackletter;
-	font-size: 16px;
-	text-align: left;
+	font-size: 14px;
+	text-align: justify;
+	padding-top: 8%;
+}
+
+.footer{
+	width: 1430px;
+	line-height: 35px;
+	background-color: #F5F5F5;
+	box-shadow: 2px;
+	padding-left: 220px;
+	margin-left: -49.5%;
+	margin-right:15%
 }
 
 .check_login{
@@ -153,7 +174,7 @@ td{
 }
 	
 .table1{
-	border-color: red;
+	margin-left: 23%;
 }
 	
 .tit{
@@ -169,34 +190,12 @@ td{
 	text-align: center
 }
 
-.button_action{
-	height: auto;
-	padding-left: 13px;
-	padding-right: 13px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	background-color: #ece7e7;
-	box-shadow: 1px 1px 9px -5px;
-}
-
 .menu{
 	font-family: Verdana;
 	font-size: 36px;
 	color: #db0c0c;
 	text-align: center;
 	background: #ece7e7;
-}
-
-.frame_menu{
-	text-align: center;
-	box-shadow: 1px 0px 22px -6px;
-	margin-left: 12.5%;
-}
-
-.frame_order{
-	text-align: center;
-	box-shadow: 1px 0px 22px -6px;
-	margin-left: 12.5%;
 }
 
 .purchase_orders{
@@ -211,6 +210,7 @@ td{
 	font-family: Tahoma;
 	font-size: 16px;
 	text-align:justify;
+	text-indent: 3%;
 	margin-left: 12.5%;
 	margin-right: 12.3%;
 	width: 905px;
@@ -234,3 +234,17 @@ td{
 	color: #60483b;
 	text-align: center;
 }
+
+.table2 .table1{
+	color: #f7f7f7
+}
+
+.end{
+	margin-left: 10%;
+	margin-right: 50%;
+}
+
+.style2 {
+	font-size: 20px;
+}
+
