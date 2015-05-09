@@ -34,37 +34,8 @@
                 else if($price==NULL and $ten_mon==NULL)
                     echo $no_info;
 				else {
-		$sql= mysql_query("insert into menu VALUE ('','".$ten_mon."','".$price."','".$type."')");
-                if($type == "1"){
-                    $sql= mysql_query("insert into khaivi VALUE ('','".$ten_mon."','".$price."')");
-                    if($sql)
-                        echo $data_yes;
-                    else
-                        echo $data_no;
-                }
-                if($type == "2"){
-                    $sql= mysql_query("insert into monchinh VALUE ('','".$ten_mon."','".$price."')");
-                    if($sql)
-                        echo $data_yes;
-                    else
-                        echo $data_no;
-                }
-                if($type == "3"){
-                    $sql= mysql_query("insert into drink VALUE ('','".$ten_mon."','".$price."')");
-                    if($sql)
-                        echo $data_yes;
-                    else
-                        echo $data_no;
-                }
-                if($type == "4"){
-                    $sql= mysql_query("insert into desert VALUE ('','".$ten_mon."','".$price."')");
-                    if($sql)
-                        echo $data_yes;
-                    else
-                        echo $data_no;
-                }
-				//echo '<meta http-equiv="refresh" content="1; url = menu.php">';
-				}         
+				$sql= mysql_query("insert into menu VALUE ('','".$ten_mon."','".$price."','".$type."')");
+                }         
             }
 			mysql_close($connection);
         ?>
