@@ -59,7 +59,7 @@
 	
 	$con = mysql_connect($localhost, $name, $pass);
 	mysql_select_db($dbname,$con);
-	header("content-type:text/html;charset=utf-8");
+	
 	$p=$n="";
 	$uSTT=$_GET["uSTT"];
 	if(isset($_POST["ok"])){
@@ -76,7 +76,7 @@
 		if($p && $n){
 			$sql = "update monchinh set Name = '$n', Price ='$p' where STT ='$uSTT'";
 			$query=mysql_query($sql);
-			header("location: managing_menu.php");
+			echo '<meta http-equiv="refresh" content="2; url=managing_menu.php">';
 		}
 	}
 	$sql= "select * from monchinh where STT='".$uSTT."'";
