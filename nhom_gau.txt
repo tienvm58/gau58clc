@@ -13,6 +13,7 @@ sprint 1: chức năng thêm món
 user story: 
 	1. là người khách hàng tôi muốn menu xem menu các món ăn của nhà hàng một cách rõ ràng
 	2. là người quản trị tôi muốn thêm món ăn vào menu
+
 sprint 2: đăng nhập và đăng xuất
 https://www.youtube.com/watch?v=Hvgi66vLST8&feature=youtu.be
 user story
@@ -20,6 +21,7 @@ user story
 	2. Là người quản trị viên, tôi muốn có quyền chỉnh sửa cơ sở dữ liệu (bài viết, hình ảnh) để thuận tiện cho việc phát triển nhà hàng.
 	3. Là người quản trị, tôi muốn có quyền hạn chế truy cập với người sử dụng website.
 	4. Là người quản trị, tôi muốn website đảm bảo tính bảo mật để thông tin khách hàng được bảo đảm.
+
 spint 3: góp ý (phản hồi) của khách hàng
 https://www.youtube.com/watch?v=dEcfhev3jGM&feature=youtu.be
 user story
@@ -31,5 +33,18 @@ user story
 	6. Là người khách hàng, tôi muốn đảm bảo thông tin cá nhân khi muốn phản hồi những đánh giá của mình tới chủ cửa hàng
 	7. Là người khách hàng, tôi muốn phản hồi tới chủ cửa hàng nhưng ẩn danh
 	8. Là người khách hàng đã góp ý cho cửa hàng, tôi muốn biết suy nghĩ của chủ cửa hàng về những góp ý đấy
+
+Spint 4: chức năng edit món của người quản lý
+User story:
+
+	1. Là người quản trị viên, tôi muốn cập nhật thông tin món ăn của cửa hàng để người dùng có thông tin chính xác nhất
+	2. Là người quản trị viên, tôi không muốn thông tin món ăn dễ bị thay đổi bởi khách hàng
+	3. Là người khách hàng, tôi muốn mọi thông tin đến từ cửa hàng sát với thực tế nhất tránh tình trạng giá niêm yết từ tận năm ngoái
+	
+Sprint 5: chức năng đặt món của khách hàng và bàn ăn
+User story:
+
+	1. Là người quản lý, tôi muốn nhận được đơn đặt hàng của khách hàng qua mạng
+	2. Là người khách hàng, tôi muốn đặt món ăn mà không cần phải chờ phục vụ đến tận nơi để hỏi
 
 
