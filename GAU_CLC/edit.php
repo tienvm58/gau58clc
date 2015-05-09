@@ -32,7 +32,7 @@
             error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
         ?>
 	<div align = center>
-		<form method = "post" action = "edit_menu_desert.php?uSTT=<?php echo $uSTT; ?>">
+		<form method = "post" action = "edit.php?uSTT=<?php echo $uSTT; ?>">
 			<table>
 							
 								<tr>

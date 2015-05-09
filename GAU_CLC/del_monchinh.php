@@ -12,11 +12,11 @@
 	
 	
 	
-	$sql= "select * from monchinh where STT='".$uSTT."'";
+	$sql= "select * from menu where STT='".$uSTT."'";
 	$query=mysql_query($sql);
 	$data=mysql_fetch_assoc($query);
 	if(isset($uSTT)){
-		$sql ="delete from monchinh where STT='$uSTT'";
+		$sql ="delete from menu where STT='$uSTT'";
 		mysql_query($sql);
 		header("location: managing_menu.php");
 	}

@@ -30,7 +30,7 @@
 			}
 			$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
 			mysql_select_db("nhahang",$connection);
-			$sql = "select * from khaivi"; // chon du lieu de in mon khai vi
+			$sql = "select * from menu where value ='1'"; // chon du lieu de in mon khai vi
 			$result = mysql_query($sql);
         ?>
  
@@ -53,10 +53,12 @@
             <td colspan="3"><div align="center">Món khai vị</div><td>
         </tr>
         <?php
+		$dem = 0;
         while($data=mysql_fetch_assoc($result)){
         ?>
         <tr>
-    	   <td width = "80" height="25"><?php echo $data["STT"]; ?></td>
+			<?php $dem++; ?>
+    	   <td width = "80" height="25"><?php echo $dem; ?></td>
     	   <td width = "350"><?php echo $data["Name"]; ?></td>
     	   <td width = "170"><?php echo $data["Price"]; ?></td>
 
@@ -69,17 +71,19 @@
        
        <?php
 	   //in mon chinh
-	   $sql = "select * from monchinh";
+	   $sql = "select * from menu where value ='2'";
        $result = mysql_query($sql);
 	   ?>      
         <tr>
             <td colspan="3" height="25"><div align="center">Món chính</div><td>
         </tr>
 		<?php
+		$dem =0;
         while($data=mysql_fetch_assoc($result)){
         ?>
         <tr>
-    	   <td><?php echo $data["STT"]; ?></td>
+			<?php $dem++; ?>
+    	   <td><?php echo $dem; ?></td>
     	   <td ><?php echo $data["Name"]; ?></td>
     	   <td ><?php echo $data["Price"]; ?></td>
 
@@ -92,17 +96,19 @@
        
         <?php
 		//in do uong
-	   $sql = "select * from drink";
+	   $sql = "select * from menu where value ='3'";
        $result = mysql_query($sql);
 	   ?>      
         <tr>
             <td colspan="3"><div align="center">Đồ uống</div><td>
         </tr>
 		<?php
+		$dem =0;
         while($data=mysql_fetch_assoc($result)){
         ?>
         <tr>
-    	   <td ><?php echo $data["STT"]; ?></td>
+			<?php $dem++; ?>
+    	   <td ><?php echo $dem; ?></td>
     	   <td ><?php echo $data["Name"]; ?></td>
     	   <td ><?php echo $data["Price"]; ?></td>
 
@@ -114,17 +120,19 @@
        
        <?php
 		//in mon trang mieng
-	   $sql = "select * from desert";
+	   $sql = "select * from menu where value ='4'";
        $result = mysql_query($sql);
 	   ?>      
         <tr>
             <td colspan="3" height="20"><div align="center">Tráng miệng</div><td>
         </tr>
 		<?php
+		$dem =0;
         while($data=mysql_fetch_assoc($result)){
         ?>
         <tr>
-    	   <td ><?php echo $data["STT"]; ?></td>
+			<?php $dem++; ?>
+    	   <td ><?php echo $dem; ?></td>
     	   <td ><?php echo $data["Name"]; ?></td>
     	   <td ><?php echo $data["Price"]; ?></td>
 

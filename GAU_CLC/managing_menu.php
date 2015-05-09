@@ -11,19 +11,11 @@
 		
         
         <?php
-		session_start();
-		if(isset($_SESSION['name']) && $_SESSION['level'] == 1){
 			include 'head_admin.html';
-		}
-		else if(isset($_SESSION['name']) && $_SESSION['level'] == 2){
-			include 'head_user.html';
-		}
-		else {
-			include 'head_admin.html';
-		}
+	
         $connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
         mysql_select_db("nhahang",$connection);
-        $sql = "select * from khaivi"; // chon du lieu de in mon khai vi
+        $sql = "select * from menu where value = '1'"; // chon du lieu de in mon khai vi
         $result = mysql_query($sql);
         ?>
         <style>
@@ -58,8 +50,8 @@
     	  
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit_menu_khaivi.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='del_khaivi.php?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='delete.php?uSTT=$data[STT]'>Del</a>" ;?></td>
         </tr>
 	   <?php
 	   }
@@ -69,7 +61,7 @@
        
        <?php
 	   //in mon chinh
-	   $sql = "select STT,Name,Price from monchinh";
+	   $sql = "select * from menu where value = '2'";
        $result = mysql_query($sql);
 	   ?>      
         <tr>
@@ -82,8 +74,8 @@
     	   
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit_menu_monchinh.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='del_monchinh.php?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='delete.php?uSTT=$data[STT]'>Del</a>" ;?></td>
         </tr>
 	   <?php
 	   }
@@ -93,7 +85,7 @@
        
         <?php
 		//in do uong
-	   $sql = "select STT,Name,Price from drink";
+	   $sql = "select * from menu where value = '3'";
        $result = mysql_query($sql);
 	   ?>      
         <tr>
@@ -106,8 +98,8 @@
     	   
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit_menu_douong.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='del_douong.php?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='delete?uSTT=$data[STT]'>Del</a>" ;?></td>
         </tr>
 	   <?php
 	   }
@@ -116,7 +108,7 @@
        
         <?php
 		//in mon trang mieng
-	   $sql = "select STT,Name,Price from desert";
+	   $sql = "select * from menu where value = '4'";
        $result = mysql_query($sql);
 	   ?>      
         <tr>
@@ -129,8 +121,8 @@
     	   
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit_menu_desert.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='del_desert.php?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
+		   <td><?php echo "<a class = 'edit' href='delete.php?uSTT=$data[STT]'>Del</a>" ;?></td>
         </tr>
 	   <?php
 	   }
