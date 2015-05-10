@@ -13,10 +13,7 @@
 		
 		<br><br><br>
 		<iframe src="Menu_order.php" width="940" height="400" frameborder="0" class = "frame_menu">
-
-		
         </iframe>
-		
 		
 		<?php
 			include 'end.html';

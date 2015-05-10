@@ -22,7 +22,7 @@
 					<img src = "image/logoGau_header.png" width = "100" height = "40" title = "Gấu Restaurant"/>	
 				</a>	
 			</span>
-			<!-- Follow on netwrk social -->
+			<!-- Follow on network social -->
 			<span class="brand" href="#">
 				<img src = "image/fb_ico.png" href = "#" width = "30" height = "30" alt = "Follow us on Facebook"  title = "Theo dõi chúng tôi trên Facebook"/>
 				<img src = "image/twitter_ico.png" href = "#" width = "30" height = "30" alt = "Follow us on Twitter"  title = "Theo dõi chúng tôi trên Twitter"/>
