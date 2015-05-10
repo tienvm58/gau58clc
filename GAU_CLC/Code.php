@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 		<title> Welcome to Gấu's Restaurant </title>
 		<meta name="author" content="GallerySoft.info" />
     		<link rel="stylesheet" href="style.css" type="text/css" />
@@ -30,31 +30,18 @@
         -->
         </style>
 		<br><br><br><br>
-		<div class = "container" >
-			<div align = "center" >
-				<table width="1000" height="100" border="0" class = "contact" style = "margin: auto 0;">
-					<tr>
-						<td>
-							<div align="center">							
-								<p>&nbsp;</p>								
-								<div class="style2">
-									<?php
-										echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
-									?>
-								</div>
-							</div>
-							<p align="center">&nbsp;</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-        </div>
+		<div class = "container">
+			<div class = "intro">
+				<div class="style2">
+					CHÀO MỪNG ĐẾN VỚI NHÀ HÀNG GẤU 
+				</div>
+            </div>
+		</div>
+
         
-		
-		<br><br><br><br><br><br>
-		<div align = "center">
 		<?php
 			include 'end.html';
 		?>
+		
 	</body>
 </html>

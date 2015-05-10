@@ -39,111 +39,107 @@
 			<div class = "text1"> <b> THỰC ĐƠN </b> </div>
 			<br><br>
             <div class="row" align = "center">
-                <table class="table table-hover table-striped">
+                <table class="table table-hover table-striped table-order">
                     <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Tên món</th>
-                            <th>Giá tiền (VNĐ)</th>
+                        <tr align="center" valign="middle">
+                            <th><div align = "center">STT </div></th>
+                            <th><div align = "center">Tên món</div></th>
+                            <th><div align = "center">Giá tiền (VNĐ)</div></th>
                         </tr>
                     </thead>
                     <tbody>
 
-		<tr>
-            <td colspan="3"><div align="center">Món khai vị</div><td>
-        </tr>
-        <?php
-		$dem = 0;
-        while($data=mysql_fetch_assoc($result)){
-        ?>
-        <tr>
-			<?php $dem++; ?>
-    	   <td width = "80" height="25"><?php echo $dem; ?></td>
-    	   <td width = "350"><?php echo $data["Name"]; ?></td>
-    	   <td width = "170"><?php echo $data["Price"]; ?></td>
-
-        </tr>
-	   <?php
-	   }
-	   ?>
+						<tr>
+							<td colspan="3"><div class="menu1"><b>Món khai vị</b></div><td>
+						</tr>
+						<?php
+							$dem = 0;
+							while($data=mysql_fetch_assoc($result)){
+						?>
+						<tr>
+							<?php $dem++; ?>
+							<td width = "80" height="25"><div align = "center"><?php echo $dem; ?></div></td>
+							<td width = "350"><div align = "center"><?php echo $data["Name"]; ?></div></td>
+							<td width = "170"><div align = "center"><?php echo $data["Price"]; ?></div></td>
+						</tr>
+						<?php
+							}
+						?>
        
        
        
-       <?php
-	   //in mon chinh
-	   $sql = "select * from menu where value ='2'";
-       $result = mysql_query($sql);
-	   ?>      
-        <tr>
-            <td colspan="3" height="25"><div align="center">Món chính</div><td>
-        </tr>
-		<?php
-		$dem =0;
-        while($data=mysql_fetch_assoc($result)){
-        ?>
-        <tr>
-			<?php $dem++; ?>
-    	   <td><?php echo $dem; ?></td>
-    	   <td ><?php echo $data["Name"]; ?></td>
-    	   <td ><?php echo $data["Price"]; ?></td>
-
-        </tr>
-	   <?php
-	   }
-	   ?>
+						<?php	
+							//in mon chinh
+							$sql = "select * from menu where value ='2'";
+							$result = mysql_query($sql);
+						?>      
+						<tr>
+							<td colspan="3" height="25"><div class = "menu1"><b>Món chính</b></div><td>
+						</tr>
+						<?php
+							$dem =0;
+							while($data=mysql_fetch_assoc($result)){
+						?>
+						<tr>
+							<?php $dem++; ?>
+							<td><div align = "center"><?php echo $dem; ?></div></td>
+							<td ><div align = "center"><?php echo $data["Name"]; ?></div></td>
+							<td ><div align = "center"><?php echo $data["Price"]; ?></div></td>
+						</tr>
+						<?php
+							}
+						?>
        
        
        
-        <?php
-		//in do uong
-	   $sql = "select * from menu where value ='3'";
-       $result = mysql_query($sql);
-	   ?>      
-        <tr>
-            <td colspan="3"><div align="center">Đồ uống</div><td>
-        </tr>
-		<?php
-		$dem =0;
-        while($data=mysql_fetch_assoc($result)){
-        ?>
-        <tr>
-			<?php $dem++; ?>
-    	   <td ><?php echo $dem; ?></td>
-    	   <td ><?php echo $data["Name"]; ?></td>
-    	   <td ><?php echo $data["Price"]; ?></td>
-
-        </tr>
-	   <?php
-	   }
-	   ?>
+						<?php
+							//in do uong
+							$sql = "select * from menu where value ='3'";
+							$result = mysql_query($sql);
+						?>      
+						<tr>
+							<td colspan="3"><div class="menu1"><b>Đồ uống</b></div><td>
+						</tr>
+						<?php
+							$dem =0;
+							while($data=mysql_fetch_assoc($result)){
+						?>
+						<tr>
+							<?php $dem++; ?>
+							<td ><div align = "center"><?php echo $dem; ?></div></td>
+							<td ><div align = "center"><?php echo $data["Name"]; ?></div></td>
+							<td ><div align = "center"><?php echo $data["Price"]; ?></div></td>
+						</tr>
+						<?php
+							}	
+						?>
        
        
-       <?php
-		//in mon trang mieng
-	   $sql = "select * from menu where value ='4'";
-       $result = mysql_query($sql);
-	   ?>      
-        <tr>
-            <td colspan="3" height="20"><div align="center">Tráng miệng</div><td>
-        </tr>
-		<?php
-		$dem =0;
-        while($data=mysql_fetch_assoc($result)){
-        ?>
-        <tr>
-			<?php $dem++; ?>
-    	   <td ><?php echo $dem; ?></td>
-    	   <td ><?php echo $data["Name"]; ?></td>
-    	   <td ><?php echo $data["Price"]; ?></td>
-
-        </tr>
-	   <?php
-	   }
-	   ?>
+						<?php
+							//in mon trang mieng
+							$sql = "select * from menu where value ='4'";
+							$result = mysql_query($sql);
+						?>      
+						<tr>
+							<td colspan="3" height="20"><div class="menu1"><b> Món tráng miệng </b></div><td>
+						</tr>
+						<?php
+							$dem =0;
+							while($data=mysql_fetch_assoc($result)){
+						?>
+						<tr>	
+							<?php $dem++; ?>
+							<td > <div align = "center"><?php echo $dem; ?> </div></td>
+							<td ><div align = "center"><?php echo $data["Name"]; ?></div></td>
+							<td ><div align = "center"><?php echo $data["Price"]; ?></div></td>
+						</tr>
+						<?php
+							}
+						?>
        
-		</tbody>
-        </table>
-		</div>
+					</tbody>
+				</table>
+			</div>
 		</div>
         
         <?php

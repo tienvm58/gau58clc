@@ -27,20 +27,11 @@
         </style>
 		<br><br><br><br>
         <div class = "container">
-        <table width="1014" height="100" border="1">
-        <tr>
-            <td><div align="center">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-			<p class="style2">
-				<?php
-					echo "HELLO ADMIN ";
-				?>
-			</p>
+			<div class = "intro">
+				<div class="style2">
+					HELLO ADMIN 
+				</div>
             </div>
-            <p align="center">&nbsp;</p></td>
-        </tr>
-        </table>
 		</div>
 		
 		<?php

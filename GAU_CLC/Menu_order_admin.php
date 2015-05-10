@@ -3,12 +3,15 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<meta name="author" content="GallerySoft.info" />
     		<link rel="stylesheet" href="style.css" type="text/css" />
-		<title>	Thêm món ăn	</title>
+		<title>	Lịch sử đặt món	</title>
 	</head>
 	<body>
 		<?php
 		include 'head_admin.html'
 		?>
+		
+		<br><br><br>
+		<div class = "text1"> <b> LỊCH SỬ ĐẶT MÓN </b> </div>
 		
 		<?php
 		$conn=mysql_connect("localhost", "root", "") or die("failed");
@@ -18,29 +21,29 @@
 		header("content-type:text/html;charset=utf-8");
 		//$data= mysql_fetch_assoc($query);
 		echo "<br><br><br>";
-		echo"<div align='center'>";
-		echo"<table border='1' align='center' weight='1000' height='200' >";
-		echo "<tr class='tit'>";
-			echo"<td>Thời gian</td>";
-			echo"<td>Bàn</td>";
-			echo"<td>Tên món</td>";
-			echo"<td>Đơn giá</td>";
-			echo"<td>Số lượng</td>";
-			echo"<td>Thành tiền</td>";
-		echo "</tr>";
-		while($data=mysql_fetch_assoc($query)){
-			echo "<tr>";
-				echo"<td>".$data["Time"]."</td>";
-				echo"<td>".$data["User"]."</td>";
-				echo"<td>".$data["Name"]."</td>";
-				echo"<td>".$data["Price"]."</td>";
-				echo"<td>".$data["Qty"]."</td>";
-				echo"<td>".$data["Money"]."</td>";
-			echo "</tr>";
-		}
-		echo"</table>";
+		echo"<div class = 'container'>";
+			echo"<table class='table table-hover table-striped table-order' style = 'margin-left:22%;'>";
+				echo "<tr>";
+					echo"<th><div align = 'center'>Thời gian </div></th>";
+					echo"<th><div align = 'center'>Bàn</div></th>";
+					echo"<th><div align = 'center'>Tên món</div></th>";
+					echo"<th><div align = 'center'>Đơn giá</div></th>";
+					echo"<th><div align = 'center'>Số lượng</div></th>";
+					echo"<th><div align = 'center'>Thành tiền</div></th>";
+				echo "</tr>";
+				while($data=mysql_fetch_assoc($query)){
+				echo "<tr>";
+					echo"<td><div align = 'center'>".$data["Time"]."</div></td>";
+					echo"<td><div align = 'center'>".$data["User"]."</div></td>";
+					echo"<td><div align = 'center'>".$data["Name"]."</div></td>";
+					echo"<td><div align = 'center'>".$data["Price"]."</div></td>";
+					echo"<td><div align = 'center'>".$data["Qty"]."</div></td>";
+					echo"<td><div align = 'center'>".$data["Money"]."</div></td>";
+				echo "</tr>";
+				}
+			echo"</table>";
 		echo"</div>";
-	?>
+		?>
 		<style type="text/css">
 			<!--
 			.style2 {
@@ -51,13 +54,12 @@
 			-->
 		</style>
 		<br><br>
-		<div align="center"</div>
-		<CAPTION><span class="style2"><a class="style2" href="deleteoffer.php">Xóa lịch sử</a></span></CAPTION>
 		<div align = "center">
+			<a class="btn" href="deleteoffer.php">Xóa lịch sử</a>
+		</div>
+		
 		<?php
 			include 'end.html';
 		?>
-		</div>
-	</body>
 	</body>
 </html>		

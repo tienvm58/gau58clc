@@ -21,10 +21,18 @@
 ?>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<meta name="author" content="GallerySoft.info" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-</head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+		<title> Thực đơn </title>
+		<meta name="author" content="GallerySoft.info" />
+    		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+		<script type="text/javascript" src="jquery.flexisel.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+	</head>
 <body>
 <?php
 	$ok=1;
@@ -62,12 +70,13 @@
 			}
 			-->
 		</style>
-        <div align="center"</div>
-		<table width="536" border="1" >
-            <div class="style2">Đặt món</div>
+		<br><br>
+        <div class = "container">
+			<div class="text1">ĐẶT MÓN</div> <br><br>
+				<table class = "table table-hover table-striped" style = "margin-left: 20%;">
 			<br>
             <tr align="center" valign="middle">
-                <td width="211"><div align="center">Tên món</div></td>
+                <td width='300'><div align="center">Tên món</div></td>
                 <td width="165"><div align="center">Giá tiền (VNĐ)</div></td>
 				<td width="60" height="25"><div align="center">Số lượng</div></td>
 				<td width="100" height="25"><div align="center">Thành tiền</div></td>
@@ -83,11 +92,11 @@
 			
 		?>	
 			<tr>
-				<td width='211'><div align='center'><?php echo $row["Name"]; ?></div></td>
+				<td width='300'><div align='center'><?php echo $row["Name"]; ?></div></td>
 				<td width='165'><div align='center'><?php echo $row["Price"]; ?> </div></td>
-				<td width = '60'><div align='center'> <?php echo "<p align='center'><input type='text' name='qty[$row[STT]]' size='5' value='{$_SESSION['cart'][$row['STT']]}'";?></div></td>
+				<td width = '60'><div align='center'> <?php echo "<p align='center'><input type='text' name='qty[$row[STT]]' size='5' value='{$_SESSION['cart'][$row['STT']]}'required/>";?></div></td>
 				<td width = '100'><div align = 'center'><?php echo $_SESSION['cart'][$row['STT']]*$row['Price']; ?></div></td>
-				<td width="60" height="25"><div align="center"> <?php echo "<a href='delcart.php?productid=$row[STT]'>Xóa</a></p>"; ?></div></td>
+				<td width="60" height="25"><div align="center"> <?php echo "<a class = 'btn' href='delcart.php?productid=$row[STT]'>Xóa</a></p>"; ?></div></td>
 				
 			</tr>
 		<?php
@@ -101,13 +110,13 @@
 		?>
 			<tr>
             	<td colspan="3" height="25"><div align="center">Tổng</div></td>
-				<td width = '100'><div align = 'center'> <?php echo $total; ?></td>
+				<td width = '100'><div align = 'center'> <?php echo $total; ?></div></td>
 			</tr>
 		</table>
 			
 		<?php
-			echo "<br><br><br><br>";
-			echo "<input type='submit' name='submit' value='Đặt món'>";
+			echo "<br><br>";
+			echo "<input class = 'btn' type='submit' name='submit' value='Đặt món' style = 'margin-left: 46%;'>";
 			if(isset($_POST['submit']))
 			{
 				date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -130,15 +139,17 @@
 			}
 			echo "<div class='pro' align='center'>";
 			echo "<br><br>";
-			echo "<b><a href='Menu_order.php'>Đặt món tiếp</a> - <a href='delcart.php?productid=0'>Xóa Tất Cả</a></b>"; 
+			echo "<a class = 'btn''btn' href='Menu_order.php'>Đặt món tiếp</a>  <a class = 'btn' href='delcart.php?productid=0'>Xóa Tất Cả</a>"; 
+			echo "</div>";
 	}
 	else
 	{
 		echo "<div class='pro'>";
-		echo "<p align='center'>Bạn chưa đặt món nào<br /><a href='Menu_order.php'>Đặt món</a></p>";
+		echo "<p align='center'>Bạn chưa đặt món nào<br /><a class = 'btn' href='Menu_order.php'>Đặt món</a></p>";
 		echo "</div>";
 	}
 ?>
+		</div>
 
 </body>
 </html>

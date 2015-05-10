@@ -11,7 +11,7 @@
 		
         <?php
             include 'head_admin.html';
-            error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED) ;
+            error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
         ?>
 	
     <div align = center>   
@@ -37,17 +37,17 @@
 				else {
 		$sql= mysql_query("insert into menu VALUE ('','".$ten_mon."','".$price."','".$type."')");
                 
-				//echo '<meta http-equiv="refresh" content="1; url = menu.php">';
+				echo '<meta http-equiv="refresh" content="1; url = menu.php">';
 				}         
              }
 			mysql_close($connection);
         ?>
 		</div>
         <br><br><br><br><br><br><br>
+		<div class = "container">
 			<form action="Add.php" method="POST">
-				<fieldset class = "frm-set">
-					<legend></legend>
-					<div class = "add_board"
+				<div class = "add_board">
+					<div class = "form-group">
 						<b> Chọn loại món ăn: </b>
 						<br> 
 						<INPUT TYPE="radio" NAME="select" VALUE="1" > Khai vị<br>
@@ -55,19 +55,17 @@
 						<INPUT TYPE="radio" NAME="select" VALUE="3"> Drink<br>
 						<INPUT TYPE="radio" NAME="select" VALUE="4"> Desert<br>
 						<br>					
-						Tên Món: <input type = "text" name = "name" <br><br>
-						<br>
-						Giá tiền (VNĐ) : <input type = "number"  name = "price"><br><br>
-						<input type = "submit" name="submit" value = "Thêm" class = "button_action"/>
+						<b>Tên Món:</b> <br> <input type = "text" name = "name" required/><br><br>
+						<b>Giá tiền (VNĐ): </b> <br> <input type = "number"  name = "price" required/><br><br>
+						<input type = "submit" name="submit" value = "Thêm" class = "btn"/>
 					</div>
-				</fieldset>
+				</div>
 			</form>
-			
-	
-	<div align = "center">
+		</div>
+		
 		<?php
 			include 'end.html';
 		?>
-	</div>
+
 	</body>
 </html>

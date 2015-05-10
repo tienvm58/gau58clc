@@ -21,11 +21,11 @@
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Tên món</th>
-                            <th>Đơn Giá</th>
-							<th>Số Lượng</th>
-							<th>Thành tiền</th>
+                            <th><div align="center">STT</th>
+                            <th><div align="center">Tên món</div></th>
+                            <th><div align="center">Đơn Giá</div></th>
+							<th><div align="center">Số Lượng</div></th>
+							<th><div align="center">Thành tiền</div></th>
 						</tr>
                     </thead>
                     <tbody>
@@ -39,18 +39,18 @@
 							$dem++;
 							$tong+= $data["Money"];
 						?>
-						<td width = "80" height="25"><?php echo $dem; ?></td>
-						<td width = "350"><?php echo $data["Name"]; ?></td>
-						<td width = "170"><?php echo $data["Price"]; ?></td>
-						<td width = "170"><?php echo $data["Qty"]; ?></td>
-						<td width = "170"><?php echo $data["Money"]; ?></td>
+						<td width = "80" height="25"><div align="center"><?php echo $dem; ?></div></td>
+						<td width = "350"><div align="center"><?php echo $data["Name"]; ?></div></td>
+						<td width = "170"><div align="center"><?php echo $data["Price"]; ?></div></td>
+						<td width = "170"><div align="center"><?php echo $data["Qty"]; ?></div></td>
+						<td width = "170"><div align="center"><?php echo $data["Money"]; ?></div></td>
 					</tr>
 					<?php
 						}
 					?>
 					<tr>
 						<td colspan="4" height="20"><div align="center">Tổng</div></td>
-						<td> <?php echo $tong; ?></td>
+						<td> <div align="center"><?php echo $tong; ?></div></td>
 					</tr>
 					</tbody>
 				</table>
@@ -65,9 +65,12 @@
 				-->
 				</style>
 				<div align="center"</div>
-				<CAPTION><span class="style2"><a class="style2" href="deletehoadon.php">Reset Hóa Đơn</a></span></CAPTION>
+				<CAPTION><span class="style2"><a class="btn" href="deletehoadon.php">Reset Hóa Đơn</a></span></CAPTION>
 			</div>
 		</div>
-			<?php }?>
+			<?php 
+				}
+				include 'end.html';	
+			?>
     </body>
 </html>    

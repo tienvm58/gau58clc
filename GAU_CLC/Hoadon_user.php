@@ -2,7 +2,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-		<title> Thực đơn </title>
+		<title> Hóa đơn </title>
 		<meta name="author" content="GallerySoft.info" />
     		<link rel="stylesheet" href="style.css" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/lightbox.css">
@@ -34,11 +34,11 @@
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Tên món</th>
-                            <th>Đơn Giá</th>
-							<th>Số Lượng</th>
-							<th>Thành tiền</th>
+                            <th><div align = "center">STT </div></th>
+                            <th><div align = "center">Tên món</div></th>
+                            <th><div align = "center">Đơn Giá</div></th>
+							<th><div align = "center">Số Lượng</div></th>
+							<th><div align = "center">Thành tiền</div></th>
 						</tr>
                     </thead>
                     <tbody>
@@ -52,11 +52,11 @@
 							$dem++;
 							$tong+= $data["Money"];
 						?>
-						<td width = "80" height="25"><?php echo $dem; ?></td>
-						<td width = "350"><?php echo $data["Name"]; ?></td>
-						<td width = "170"><?php echo $data["Price"]; ?></td>
-						<td width = "170"><?php echo $data["Qty"]; ?></td>
-						<td width = "170"><?php echo $data["Money"]; ?></td>
+						<td width = "80" height="25"><div align = "center"><?php echo $dem; ?></div></td>
+						<td width = "350"><div align = "center"><?php echo $data["Name"]; ?></div></td>
+						<td width = "170"><div align = "center"><?php echo $data["Price"]; ?></div></td>
+						<td width = "170"><div align = "center"><?php echo $data["Qty"]; ?></div></td>
+						<td width = "170"><div align = "center"><?php echo $data["Money"]; ?></div></td>
 					</tr>
 					<?php
 						}

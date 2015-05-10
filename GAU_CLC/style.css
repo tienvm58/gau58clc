@@ -66,10 +66,10 @@ body{
     padding: 19px 61.4px;
 }
 
-.login_board {
+.edit {
 	width: 200px;
 	line-height: 30px;
-	margin-left: 38%;
+	margin-left: 35%;
 	margin-right: 50%;
 	background-color: #FAFAFA;
 	border-radius: 10%;
@@ -81,7 +81,7 @@ body{
 .add_board{
 	width: 350px;
 	line-height: 30px;
-	margin-left: 44.5%;
+	margin-left: 27%;
 	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
@@ -93,8 +93,7 @@ body{
 	width: 400px;
 	height: auto;
 	line-height: 30px;
-	margin-left: 7%;
-	margin-right: 5%;
+	margin-left: 23%;
 	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 15px -6px;
@@ -148,7 +147,7 @@ dd{
 }
 
 .footer{
-	width: 1430px;
+	width: 1390px;
 	line-height: 35px;
 	background-color: #F5F5F5;
 	box-shadow: 2px;
@@ -211,11 +210,10 @@ td{
 	font-size: 16px;
 	text-align:justify;
 	text-indent: 3%;
-	margin-left: 12.5%;
-	margin-right: 12.3%;
-	width: 905px;
+	margin-right: 11%;
+	width: 840px;
 	line-height: 35px;
-	background-color: #f2ebeb;
+	background-color: #F5F5F5;
 	border-radius: 10%;
 	box-shadow: 1px 0px 22px -6px;
 	padding-top: 85px;
@@ -239,12 +237,12 @@ td{
 	color: #f7f7f7
 }
 
-.end{
-	margin-left: 10%;
-	margin-right: 50%;
+.menu1{
+	font-size: 15px;
+	text-align: center;
 }
 
-.style2 {
-	font-size: 20px;
+.table {
+	margin-left: 5%;
+	font-family: Arial;
 }
-

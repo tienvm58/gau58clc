@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Thêm tài khoản</title>
-		<style>
-		</style>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+		<title> Quản lý tài khoản </title>
+		<meta name="author" content="GallerySoft.info" />
+    		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+		<script type="text/javascript" src="jquery.flexisel.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<script type="text/javascript" src="js/bootstrap.js"></script>
 	</head>
 
 <body>
 	<?php
 		include 'head_admin.html';
 	?>
-	<div style="width: 300px; margin: auto">
+	
 		<?php
 			
 			if(isset($_POST['addacc'])) {				// add acount
@@ -38,49 +45,59 @@
 			
 			
 		?>
-	</div>
-		<?php
-			$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
-			mysql_select_db("nhahang",$connection);
-			$sql = "select * from user"; // chon du lieu tu bang user
-			$result = mysql_query($sql);
+	<br>
+	<?php
+		$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
+        mysql_select_db("nhahang",$connection);
+        $sql = "select * from user"; // chon du lieu tu bang user
+        $result = mysql_query($sql);
         ?>
-		
         <style type="text/css">
-			<!--
-			.style2 {
-			   font-size: 36px;
-			   color: #FF0000;
-			   padding-bottom: 20px;
-			}
-			-->
+        <!--
+        .style2 {
+	       font-size: 36px;
+	       color: #FF0000;
+		   padding-bottom: 20px;
+        }
+        -->
         </style>
-        <!-- <br><br><br><br> -->
-        <div align="center">
-			<table width="449" border="1" >
-				<CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN<a class="style2" href="addacount.php">(+)</a><a class="style2" href="deleteacount.php">(-)</a></span></CAPTION>
-				<tr align="center" valign="middle">
-					<td width="211"><div align="center">Tên đăng nhập</div></td>
-					<td width="165"><div align="center">Mật khẩu</div></td>
-					<td width="165"><div align="center">Level</div></td>
-				</tr>
+        <br><br><br><br>
+		<div class = "container">
+	 		<div class="text1">DANH SÁCH TÀI KHOẢN<a class="text1" href="addacount.php">(+)</a><a class="text1" href="deleteacount.php">(-)</a></div><br><br>
+				<table class = "table table-hover table-striped table-order" style = "margin-left: 20%;">
+					<thead>
+					<tr align="center" valign="middle">
+						<th><div align="center">Tên đăng nhập</div></th>
+						<th><div align="center">Mật khẩu</div></th>
+						<th><div align="center">Level</div></th>
+					</tr>
+					</thead>
+					<tbody>
+	
             
-			<?php
-				while($data=mysql_fetch_assoc($result)){
-			?>
-				<tr>
-				   <td width="51" height="25"><div align="center"><?php echo $data["name"]; ?></div></td>
-				   <td width="211"><div align="center"><?php echo $data["pass"]; ?></div></td>
-				   <td width="165"><div align="center"><?php echo $data["level"]; ?></div></td>
+					<?php
+						while($data=mysql_fetch_assoc($result)){
+					?>
+					<tr>
+						<td><div align="center"><?php echo $data["name"]; ?></div></td>
+						<td><div align="center"><?php echo $data["pass"]; ?></div></td>
+						<td><div align="center"><?php echo $data["level"]; ?></div></td>
+					</tr>
+	   <?php
+	   }
 
-				</tr>
-			<?php
-				}
-			?>
-			</table>
-		</div>
-		<?php
-			include 'end.html';
-		?>
+	   ?>
+	   </tbody>
+	   </table>
+	   		</div>
+
+		
+
+	
+	<?php
+
+		include 'end.html';
+	?>
+	
 </body>
 </html>

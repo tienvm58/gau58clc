@@ -12,16 +12,14 @@
 		?>
 		
 		<br><br><br>
-		<iframe src="Menu_order.php" width="1014" height="400" frameborder="0" class = "frame_menu">
+		<iframe src="Menu_order.php" width="940" height="400" frameborder="0" class = "frame_menu">
 
 		
         </iframe>
 		
 		
-		<div align = "center">
-			<?php
-				include 'end.html';
-			?>
-		</div>
+		<?php
+			include 'end.html';
+		?>
 	</body>
 </html>

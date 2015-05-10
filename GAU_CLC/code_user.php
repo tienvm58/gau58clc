@@ -27,21 +27,11 @@
         </style>
 		<br><br><br><br>
 		<div class = "container">
-			<div align = "center">
-			<table width="994" height="100" border="1">
-			<tr>
-				<td><div align="center">
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p class="style2">
-					<?php
-						echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
-					?>
-				</p>
+			<div class = "intro">
+				<div class="style2">
+					CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ 
 				</div>
-				<p align="center">&nbsp;</p></td>
-			</tr>
-			</table>
+            </div>
 		</div>
 		
 		<?php

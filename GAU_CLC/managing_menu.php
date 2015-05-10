@@ -19,28 +19,28 @@
         $result = mysql_query($sql);
         ?>
         <style>
-        <!--
-        .style2 {
-	       font-size: 36px;
-	       color: #FF0000;
-        }
-        -->
-		.edit{
-			color: black;
-			text-align: center;
-		}
+			.edit{
+				color: black;
+				text-align: center;
+			}
         </style>
+		
         <br><br><br><br>
-        <div align="center"</div>
-        <table width="449" border="1" align="center">
-            <CAPTION><span class="style2">MENU<a class = "style2" href="Add.php">(+)</a></span></CAPTION>
-            <tr align="center" valign="middle">
-                
-                <td width="211"><div align="center">Name</div></td>
-                <td colspan="3" width="165"><div align="center">Price</div></td>	
-            </tr>
+        <div class = "container">
+			<div class = "text1"> <b> THỰC ĐƠN </b> <a class="text1" href="Add.php">(+)</a> </div>
+			<br><br>
+			<div class = "row">
+				<table class="table table-hover table-striped" style = "margin-left: 22%;">
+					<thead>	
+						<tr align="center" valign="middle">
+							<th> <div align = "center">Tên món</div></th>
+							<th><div align = "center">Giá</div></th>	
+							<th colspan = "2"> <div align = "center">Thao tác </div></th>
+						</tr>
+					</thead>
+					<tbody>
             <tr>
-            	<td colspan="4" height="25"><div align="center">Khai vị</div><td>
+            	<td colspan="4" height="25"><div class = "menu1"><b>Khai vị</b></div><td>
             </tr>
 
         <?php
@@ -50,8 +50,8 @@
     	  
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='delete.php?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='edit.php?uSTT=$data[STT]'>Sửa</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='delete.php?uSTT=$data[STT]'>Xóa</a>" ;?></td>
         </tr>
 	   <?php
 	   }
@@ -65,7 +65,7 @@
        $result = mysql_query($sql);
 	   ?>      
         <tr>
-            <td colspan="4" height="25"><div align="center">Món chính</div><td>
+            <td colspan="4" height="25"><div class = "menu1"><b>Món chính</b></div><td>
         </tr>
 		<?php
         while($data=mysql_fetch_assoc($result)){
@@ -74,8 +74,8 @@
     	   
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='delete.php?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='edit.php?uSTT=$data[STT]'>Sửa</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='delete.php?uSTT=$data[STT]'>Xóa</a>" ;?></td>
         </tr>
 	   <?php
 	   }
@@ -89,7 +89,7 @@
        $result = mysql_query($sql);
 	   ?>      
         <tr>
-            <td colspan="4" height="25"><div align="center">Đồ uống</div><td>
+            <td colspan="4" height="25"><div class = "menu1"><b>Đồ uống</b></div><td>
         </tr>
 		<?php
         while($data=mysql_fetch_assoc($result)){
@@ -98,8 +98,8 @@
     	   
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='delete?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='edit.php?uSTT=$data[STT]'>Sửa</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='delete?uSTT=$data[STT]'>Xóa</a>" ;?></td>
         </tr>
 	   <?php
 	   }
@@ -112,7 +112,7 @@
        $result = mysql_query($sql);
 	   ?>      
         <tr>
-            <td colspan="4" height="25"><div align="center">Desert</div><td>
+            <td colspan="4" height="25"><div class = "menu1"><b> Món tráng miệng </b></div><td>
         </tr>
 		<?php
         while($data=mysql_fetch_assoc($result)){
@@ -121,15 +121,17 @@
     	   
     	   <td width="211"><div align="center"><?php echo $data["Name"]; ?></div></td>
     	   <td width="165"><div align="center"><?php echo $data["Price"]; ?></div></td>
-		   <td><?php echo "<a class = 'edit' href='edit.php?uSTT=$data[STT]'>Edit</a>" ;?></td>
-		   <td><?php echo "<a class = 'edit' href='delete.php?uSTT=$data[STT]'>Del</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='edit.php?uSTT=$data[STT]'>Sửa</a>" ;?></td>
+		   <td><?php echo "<a class = 'btn' href='delete.php?uSTT=$data[STT]'>Xóa</a>" ;?></td>
         </tr>
 	   <?php
 	   }
 	   ?>
-       
+       </tbody>
        
         </table>
+		</div>
+		</div>
         
         <?php
 			mysql_close($connection);
