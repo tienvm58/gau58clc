@@ -7,7 +7,8 @@
 	</head>
 	<body>
 		<?php
-		include 'head_admin.html'
+			session_start();
+			include 'head_admin.html'
 		?>
 		
 		<br><br><br>

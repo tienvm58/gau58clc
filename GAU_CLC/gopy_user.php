@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<?php
+			session_start();
 			include 'head_user.html'
 		?>
 		<br><br><br><br>

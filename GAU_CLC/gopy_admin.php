@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<?php
+			session_start();
 			include 'head_admin.html'
 		?>
 	

@@ -15,13 +15,14 @@
 		
 	<body>
 		<?php 
+			session_start();
 			include 'head_admin.html'; 
 		?>
 		
 		<div class = "container">
 			<form name="formchoose" action="Hoadon_show.php" method="post">
 				<div class = "account_action">
-					<label  for="name"><div align = "center"><b>Xem hóa đơn của</b></div></label>
+					<label  for="name"><div align = "center"><b>Xem hóa đơn của user</b></div></label>
 					<div align = "center">
 					<input type="text" name="name" size = "25" maxlength = "40" required/> <br><br>
 					</div>

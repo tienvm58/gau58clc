@@ -14,6 +14,7 @@
 	</head>
 	<body>
 		<?php
+			session_start();
 			include 'head_user.html';
 		?>
 		<style type="text/css">
