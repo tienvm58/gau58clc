@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<?php include"logo_tab.php" ?>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 		<title> Welcome to Gấu's Restaurant </title>
