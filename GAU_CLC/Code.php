@@ -32,7 +32,7 @@
 		<br><br><br><br>
 		<div class = "container" >
 			<div align = "center" >
-				<table width="1000" height="100" border="1">
+				<table width="1000" height="100" border="0" class = "contact" style = "margin: auto 0;">
 					<tr>
 						<td>
 							<div align="center">							
