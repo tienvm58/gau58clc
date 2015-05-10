@@ -30,25 +30,25 @@
         -->
         </style>
 		<br><br><br><br>
-		<div class = "container">
-			<div align = "center">
-			<table width="1014" height="100" border="1" class = "table1">
-			<tr>
-				<td><div align="center">
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p class="style2">
-					<?php
-						echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
-						
-					?>
-				</p>
-				</div>
-				<p align="center">&nbsp;</p></td>
-			</tr>
-			</table>
-		</div>
-        
+		<div class = "container" >
+			<div align = "center" >
+				<table width="1000" height="100" border="1">
+					<tr>
+						<td>
+							<div align="center">							
+								<p>&nbsp;</p>								
+								<div class="style2">
+									<?php
+										echo "CHÚC CÁC BẠN CÓ MỘT TUẦN LÀM VIỆC HIỆU QUẢ";
+									?>
+								</div>
+							</div>
+							<p align="center">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+        </div>
         
 		
 		<br><br><br><br><br><br>
