@@ -39,50 +39,48 @@
 			
 		?>
 	</div>
-	<br>
-	<?php
-		$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
-        mysql_select_db("nhahang",$connection);
-        $sql = "select * from user"; // chon du lieu tu bang user
-        $result = mysql_query($sql);
+		<?php
+			$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
+			mysql_select_db("nhahang",$connection);
+			$sql = "select * from user"; // chon du lieu tu bang user
+			$result = mysql_query($sql);
         ?>
-        <style type="text/css">
-        <!--
-        .style2 {
-	       font-size: 36px;
-	       color: #FF0000;
-		   padding-bottom: 20px;
-        }
-        -->
-        </style>
-        <br><br><br><br>
-        <div align="center"</div>
-        <table width="449" border="1" >
-            <CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN<a class="style2" href="addacount.php">(+)</a><a class="style2" href="deleteacount.php">(-)</a></span></CAPTION>
-            <tr align="center" valign="middle">
-                <td width="211"><div align="center">Tên đăng nhập</div></td>
-                <td width="165"><div align="center">Mật khẩu</div></td>
-				<td width="165"><div align="center">Level</div></td>
-            </tr>
-            
-        <?php
-        while($data=mysql_fetch_assoc($result)){
-        ?>
-        <tr>
-    	   <td width="51" height="25"><div align="center"><?php echo $data["name"]; ?></div></td>
-    	   <td width="211"><div align="center"><?php echo $data["pass"]; ?></div></td>
-    	   <td width="165"><div align="center"><?php echo $data["level"]; ?></div></td>
-
-        </tr>
-	   <?php
-	   }
-	   ?>
-
 		
+        <style type="text/css">
+			<!--
+			.style2 {
+			   font-size: 36px;
+			   color: #FF0000;
+			   padding-bottom: 20px;
+			}
+			-->
+        </style>
+        <!-- <br><br><br><br> -->
+        <div align="center">
+			<table width="449" border="1" >
+				<CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN<a class="style2" href="addacount.php">(+)</a><a class="style2" href="deleteacount.php">(-)</a></span></CAPTION>
+				<tr align="center" valign="middle">
+					<td width="211"><div align="center">Tên đăng nhập</div></td>
+					<td width="165"><div align="center">Mật khẩu</div></td>
+					<td width="165"><div align="center">Level</div></td>
+				</tr>
+            
+			<?php
+				while($data=mysql_fetch_assoc($result)){
+			?>
+				<tr>
+				   <td width="51" height="25"><div align="center"><?php echo $data["name"]; ?></div></td>
+				   <td width="211"><div align="center"><?php echo $data["pass"]; ?></div></td>
+				   <td width="165"><div align="center"><?php echo $data["level"]; ?></div></td>
 
-	
-	<?php
-		include 'end.html';
-	?>
+				</tr>
+			<?php
+				}
+			?>
+			</table>
+		</div>
+		<?php
+			include 'end.html';
+		?>
 </body>
 </html>
