@@ -71,6 +71,8 @@
                 <td width="165"><div align="center">Giá tiền (VNĐ)</div></td>
 				<td width="60" height="25"><div align="center">Số lượng</div></td>
 				<td width="100" height="25"><div align="center">Thành tiền</div></td>
+				<td width="60" height="25"><div align="center"></div></td>
+				
 			</tr>
         
 		<?php
@@ -85,6 +87,8 @@
 				<td width='165'><div align='center'><?php echo $row["Price"]; ?> </div></td>
 				<td width = '60'><div align='center'> <?php echo "<p align='center'><input type='text' name='qty[$row[STT]]' size='5' value='{$_SESSION['cart'][$row['STT']]}'";?></div></td>
 				<td width = '100'><div align = 'center'><?php echo $_SESSION['cart'][$row['STT']]*$row['Price']; ?></div></td>
+				<td width="60" height="25"><div align="center"> <?php echo "<a href='delcart.php?productid=$row[STT]'>Xóa</a></p>"; ?></div></td>
+				
 			</tr>
 		<?php
 			
@@ -106,7 +110,6 @@
 			echo "<input type='submit' name='submit' value='Đặt món'>";
 			if(isset($_POST['submit']))
 			{
-				
 				date_default_timezone_set('Asia/Ho_Chi_Minh');
 				$t = date('d/m/Y H:i:s');
 				$connect=mysql_connect("localhost","root","") or die("Can not connect database");
@@ -116,16 +119,18 @@
 				$query = mysql_query($sql);
 				while($data = mysql_fetch_array($query))
 				{		
-					$add="insert into offer VALUE ('".$t."','".$_SESSION['name']."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
+					$user = $_SESSION['name'];
+					$add="insert into offer VALUE ('".$t."','".$user."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
+					$mon= "insert into hoadon VALUE ('".$user."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
 					mysql_query($add);
+					mysql_query($mon);
 				}
-				echo "<div class='pro'>";
-				echo "<p align='center'>Bạn đã đặt món thành công<br />";
-				echo "</div>";
+				echo "<br><h3>Đặt món thành công</b><br><b>Xem hóa đơn tạm thời của bạn</h3>";		
+				echo '<meta http-equiv="refresh" content="2; url=Hoadon_user.php">';
 			}
 			echo "<div class='pro' align='center'>";
 			echo "<br><br>";
-			echo "<b><a href='Menu_order.php'>Đặt món tiếp</a> - <a href='delcart.php?productid=0'>Xóa</a></b>"; 
+			echo "<b><a href='Menu_order.php'>Đặt món tiếp</a> - <a href='delcart.php?productid=0'>Xóa Tất Cả</a></b>"; 
 	}
 	else
 	{

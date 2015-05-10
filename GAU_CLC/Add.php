@@ -11,7 +11,7 @@
 		
         <?php
             include 'head_admin.html';
-            error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+            error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED) ;
         ?>
 	
     <div align = center>   

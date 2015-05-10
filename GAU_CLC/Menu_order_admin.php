@@ -13,7 +13,7 @@
 		<?php
 		$conn=mysql_connect("localhost", "root", "") or die("failed");
 		mysql_select_db("nhahang",$conn);
-		$sql ="select * from offer order by Time desc";
+		$sql ="select * from offer where Qty!= 0 order by Time desc";
 		$query=mysql_query($sql);
 		header("content-type:text/html;charset=utf-8");
 		//$data= mysql_fetch_assoc($query);
@@ -41,11 +41,23 @@
 		echo"</table>";
 		echo"</div>";
 	?>
-	<div align = "center">
+		<style type="text/css">
+			<!--
+			.style2 {
+			font-size: px;
+			color: #FF0000;
+			padding-bottom: 20px;
+			}
+			-->
+		</style>
+		<br><br>
+		<div align="center"</div>
+		<CAPTION><span class="style2"><a class="style2" href="deleteoffer.php">Xóa lịch sử</a></span></CAPTION>
+		<div align = "center">
 		<?php
 			include 'end.html';
 		?>
-	</div>
+		</div>
 	</body>
 	</body>
 </html>		

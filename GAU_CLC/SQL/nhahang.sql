@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2015 at 02:01 PM
+-- Generation Time: May 10, 2015 at 06:01 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -43,6 +43,20 @@ CREATE TABLE IF NOT EXISTS `gopy` (
 INSERT INTO `gopy` (`id`, `Time`, `username`, `gopy`) VALUES
 (9, '09/05/2015 08:16:04', 'ban1', 'abc'),
 (10, '09/05/2015 08:19:26', 'ban1', 'zyz');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoadon`
+--
+
+CREATE TABLE IF NOT EXISTS `hoadon` (
+  `User` varchar(30) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `Price` int(10) NOT NULL,
+  `Qty` int(3) NOT NULL,
+  `Money` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -92,24 +106,6 @@ CREATE TABLE IF NOT EXISTS `offer` (
   `Money` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `offer`
---
-
-INSERT INTO `offer` (`Time`, `User`, `Name`, `Price`, `Qty`, `Money`) VALUES
-('09/05/2015 12:15:28', 'ban1', 'Salad', 25000, 1, 25000),
-('09/05/2015 12:15:28', 'ban1', 'Soup', 100000, 1, 100000),
-('09/05/2015 12:15:28', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
-('09/05/2015 12:16:17', 'ban1', 'Salad', 25000, 1, 25000),
-('09/05/2015 12:16:17', 'ban1', 'Soup', 100000, 1, 100000),
-('09/05/2015 12:16:17', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
-('09/05/2015 16:49:36', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
-('09/05/2015 16:50:36', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
-('09/05/2015 16:50:36', 'ban1', 'GÃ  háº§m', 300000, 1, 300000),
-('09/05/2015 16:52:05', 'ban1', 'trá»©ng chiÃªn', 12000, 2, 24000),
-('09/05/2015 16:52:05', 'ban1', 'mÃµm lá»£n', 30000, 1, 30000),
-('09/05/2015 16:52:05', 'ban1', 'GÃ  háº§m', 300000, 1, 300000);
-
 -- --------------------------------------------------------
 
 --
@@ -131,7 +127,8 @@ INSERT INTO `user` (`name`, `pass`, `level`) VALUES
 ('admin', 'admin', 1),
 ('ban1', 'ban1', 2),
 ('ban2', 'ban2', 2),
-('ban3', 'ban3', 2);
+('ban3', 'ban3', 2),
+('ban4', 'ban4', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -18,8 +18,6 @@
 				<div class = "comment">
 					<div class = "form-group">
 					<h3>Nhận xét của bạn về chất lượng của nhà hàng </h3><br>
-					<b>Tên của bạn</b><br>
-					<input type="text" name="usname"maxlength = "25" required/> <br><br>
 					<br><b>Nhận xét của bạn </b><br>
 					<textarea rows = "8" cols = "120" name="gopy" class = "box_gopy" id="gopy" required/></textarea>
 					<br><br>
