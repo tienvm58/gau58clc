@@ -29,7 +29,6 @@
 					$query = "insert into user(name, pass, level) values ('".$n."','".$p."','".$l."')";
 					if ($conn->query($query)) {
 						echo "Thêm tài khoản:".$n." with pass: ".$p." thành công <br>";
-						echo '<meta http-equiv="refresh" content="2; url=edit_user.php">';
 					} else {
 						echo "không thành công";
 					}	
@@ -59,7 +58,7 @@
         <br><br><br><br>
         <div align="center"</div>
         <table width="449" border="1" >
-            <CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN</span></CAPTION>
+            <CAPTION><span class="style2">DANH SÁCH TÀI KHOẢN<a class="style2" href="addacount.php">(+)</a><a class="style2" href="deleteacount.php">(-)</a></span></CAPTION>
             <tr align="center" valign="middle">
                 <td width="211"><div align="center">Tên đăng nhập</div></td>
                 <td width="165"><div align="center">Mật khẩu</div></td>
@@ -79,27 +78,7 @@
 	   }
 	   ?>
 
-		<form name="formaddacc" action="#" method="post">
-			<fieldset class = "frm-set">
-				<legend></legend>
-				<div class = "account_action">
-				<div><b>
-					<div align = "center"> <h2>Nhập thông tin tài khoản</h2> </div> 
-					<br>
-					<label  for="name">Tên đăng nhập: </label>
-					<input width = "100%" type="text" name="addname" maxlength = "25" placeholder="Username" required/>
-					<br>
-					<label  for="password">Mật khẩu:  </label>
-					<input width = "100%" type="text" name="addpass" maxlength = "25" placeholder="Password" required />
-					<br>
-					<label  for="level">Level:</label>
-					<input width = "100%" type="text" name="addlevel" maxlength = "1" placeholder="Level" required />
-					<br><br>
-					<div align = "center"><input type="submit" name="addacc" value="Add" class = "button_action"/> </div>
-				</b></div>
-				</div>
-			</fieldset>
-		</form>
+		
 
 	
 	<?php
