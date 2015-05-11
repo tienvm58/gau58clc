@@ -82,6 +82,9 @@ User story:
 
 	1. Là người quản lý, tôi muốn nhận được đơn đặt hàng của khách hàng qua mạng
 	2. Là người khách hàng, tôi muốn đặt món ăn mà không cần phải chờ phục vụ đến tận nơi để hỏi
+	3. Là người quản lý tôi muốn xem Hóa đơn từng bàn ăn
+	4. Là người khách hàng tôi muốn xem Hóa đơn của mình
+	5. Là người quản lý tôi sẽ reset lại hóa đơn của bàn khi khách hàng thanh toán tiền và ra về, để phục vụ cho khách hàng kế tiếp.
 
 
 	
