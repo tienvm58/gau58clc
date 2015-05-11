@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<?php include"logo_tab.php" ?>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<meta name="author" content="GallerySoft.info" />
     		<link rel="stylesheet" href="style.css" type="text/css" />
