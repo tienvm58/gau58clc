@@ -24,7 +24,7 @@ Sprint 1: chức năng thêm món
 
 User story: 
 
-	1. là người khách hàng tôi muốn menu xem menu các món ăn của nhà hàng một cách rõ ràng
+	1. là người khách hàng tôi muốn xem menu các món ăn của nhà hàng một cách rõ ràng
 	
 	2. là người quản trị tôi muốn thêm món ăn vào menu
 
