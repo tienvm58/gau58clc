@@ -68,7 +68,7 @@
 				</style>
 				<div align="center"</div>
 				<CAPTION><span class="style2"><a class="btn" href="deletehoadon.php">Reset Hóa Đơn</a></span></CAPTION>
-			</div>
+				</div>
 		</div>
 			<?php 
 				}

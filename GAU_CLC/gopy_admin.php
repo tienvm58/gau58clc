@@ -45,6 +45,19 @@
 				echo"</div>";
 			echo"</div>";
 		?>
+		
+		<style type="text/css">
+			<!--
+			.style2 {
+			font-size: px;
+			color: #FF0000;
+			padding-bottom: 20px;
+			}
+			-->
+		</style>
+		<div align="center"</div>
+		<CAPTION><span class="style2"><a class="btn" href="deletegopy.php">Xóa lịch sử</a></span></CAPTION>
+		</div>
 	
 		<?php
 			include 'end.html';

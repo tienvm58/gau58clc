@@ -2,6 +2,7 @@
 
 <?php
 	error_reporting(E_ERROR);
+	include 'head_user.html';
 	session_start();
 	if(isset($_POST['submit']))
 	{
@@ -130,9 +131,23 @@
 				{		
 					$user = $_SESSION['name'];
 					$add="insert into offer VALUE ('".$t."','".$user."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
-					$mon= "insert into hoadon VALUE ('".$user."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
 					mysql_query($add);
-					mysql_query($mon);
+					/*
+					$chinh = $data["Name"];
+					$tien = $_SESSION['cart'][$data["STT"]];
+					$pa = "select * from hoadon where Name = '$chinh' and User = '$tien'";
+					if(isset($pa)){
+						$cuong = mysql_query($pa);
+						$cuong["Qty"]+= $_SESSION['cart'][$data["STT"]];
+						$cuong["Money"]+= $_SESSION['cart'][$data["STT"]]*$data["Price"];
+		
+					}
+					else{
+						*/
+						$mon= "insert into hoadon VALUE ('".$user."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
+						mysql_query($mon);
+					//}
+					
 				}
 				echo "<br><h3>Đặt món thành công</b><br><b>Xem hóa đơn tạm thời của bạn</h3>";		
 				echo '<meta http-equiv="refresh" content="2; url=Hoadon_user.php">';
@@ -148,6 +163,8 @@
 		echo "<p align='center'>Bạn chưa đặt món nào<br /><a class = 'btn' href='Menu_order.php'>Đặt món</a></p>";
 		echo "</div>";
 	}
+	
+	include 'end.html';
 ?>
 		</div>
 
