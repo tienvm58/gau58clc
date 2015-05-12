@@ -43,15 +43,17 @@
                 <table class="table table-hover table-striped table-order">
                     <thead>
                         <tr align="center" valign="middle">
-                            <th><div align = "center">STT </div></th>
-                            <th><div align = "center">Tên món</div></th>
-                            <th><div align = "center">Giá tiền (VNĐ)</div></th>
+                            <th><div align = "center" class = "menu_th">STT </div></th>
+                            <th><div align = "center" class = "menu_th">Tên món</div></th>
+                            <th><div align = "right" class = "menu_th">Giá tiền (VNĐ)</div></th>
                         </tr>
                     </thead>
                     <tbody>
 
 						<tr>
-							<td colspan="3"><div class="menu1"><b>Món khai vị</b></div><td>
+							<td> </td>
+							<td><div class="menu1"><b>Khai vị</b></div><td>
+							<td> </td>
 						</tr>
 						<?php
 							$dem = 0;
@@ -61,7 +63,7 @@
 							<?php $dem++; ?>
 							<td width = "80" height="25"><div align = "center"><?php echo $dem; ?></div></td>
 							<td width = "350"><div align = "center"><?php echo $data["Name"]; ?></div></td>
-							<td width = "170"><div align = "center"><?php echo $data["Price"]; ?></div></td>
+							<td width = "170"><div align = "right"><?php echo $data["Price"]; ?></div></td>
 						</tr>
 						<?php
 							}
@@ -75,7 +77,9 @@
 							$result = mysql_query($sql);
 						?>      
 						<tr>
-							<td colspan="3" height="25"><div class = "menu1"><b>Món chính</b></div><td>
+							<td> </td>
+							<td><div class="menu1"><b>Món chính</b></div><td>
+							<td> </td>
 						</tr>
 						<?php
 							$dem =0;
@@ -85,7 +89,7 @@
 							<?php $dem++; ?>
 							<td><div align = "center"><?php echo $dem; ?></div></td>
 							<td ><div align = "center"><?php echo $data["Name"]; ?></div></td>
-							<td ><div align = "center"><?php echo $data["Price"]; ?></div></td>
+							<td ><div align = "right"><?php echo $data["Price"]; ?></div></td>
 						</tr>
 						<?php
 							}
@@ -99,7 +103,9 @@
 							$result = mysql_query($sql);
 						?>      
 						<tr>
-							<td colspan="3"><div class="menu1"><b>Đồ uống</b></div><td>
+							<td> </td>
+							<td><div class="menu1"><b>Đồ uống</b></div><td>
+							<td> </td>
 						</tr>
 						<?php
 							$dem =0;
@@ -109,7 +115,7 @@
 							<?php $dem++; ?>
 							<td ><div align = "center"><?php echo $dem; ?></div></td>
 							<td ><div align = "center"><?php echo $data["Name"]; ?></div></td>
-							<td ><div align = "center"><?php echo $data["Price"]; ?></div></td>
+							<td ><div align = "right"><?php echo $data["Price"]; ?></div></td>
 						</tr>
 						<?php
 							}	
@@ -122,7 +128,9 @@
 							$result = mysql_query($sql);
 						?>      
 						<tr>
-							<td colspan="3" height="20"><div class="menu1"><b> Món tráng miệng </b></div><td>
+							<td> </td>
+							<td><div class="menu1"><b>Tráng miệng</b></div><td>
+							<td> </td>
 						</tr>
 						<?php
 							$dem =0;
@@ -132,7 +140,7 @@
 							<?php $dem++; ?>
 							<td > <div align = "center"><?php echo $dem; ?> </div></td>
 							<td ><div align = "center"><?php echo $data["Name"]; ?></div></td>
-							<td ><div align = "center"><?php echo $data["Price"]; ?></div></td>
+							<td ><div align = "right"><?php echo $data["Price"]; ?></div></td>
 						</tr>
 						<?php
 							}

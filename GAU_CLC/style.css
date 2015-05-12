@@ -238,11 +238,15 @@ td{
 }
 
 .menu1{
-	font-size: 15px;
+	font-size: 17px;
 	text-align: center;
 }
 
 .table {
 	margin-left: 5%;
 	font-family: Arial;
+}
+
+.menu_th{
+	font-size: 19px;
 }

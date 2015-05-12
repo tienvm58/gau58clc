@@ -5,7 +5,6 @@
 ?>
 <html>
 	<head>
-		<?php include"logo_tab.php" ?>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 			<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
 		<title> Hóa đơn </title>
@@ -70,14 +69,15 @@
 			<table class = "table table-hover table-striped" style = "margin-left: 20%">
 			<br>
             <tr align="center" valign="middle">
-                <th><div align="center">STT</div></th>
-                <th><div align="center">Tên món</div></th>
-                <th><div align="center">Giá tiền (VNĐ)</div></th>
-				<th><div align="center">Chọn</div></th>
+                <th><div align="center" class = "menu_th">STT</div></th>
+                <th><div align="center" class = "menu_th">Tên món</div></th>
+                <th><div align="right" class = "menu_th">Giá tiền (VNĐ)</div></th>
+				<th></th>
+				<th><div align="center" class = "menu_th">Chọn</div></th>
                 
 			</tr>
             <tr>
-            	<td colspan="4" height="25"><div class = "menu1" align="center">Món khai vị</div><td>
+            	<td colspan = "5"><div class = "menu1" align="center"><b>Khai vị</b></div><td>
             </tr>
 		<?php
 			$sql="select * from menu where value ='1' order by STT desc";//in món khai vị
@@ -98,7 +98,8 @@
 					<tr>
 					<td width='51' height='25'><div align='center'><?php echo $dem; ?></div></td>
 					<td width='211'><div align='center'><?php echo $data["Name"]; ?></div></td>
-					<td width='165'><div align='center'><?php echo $data["Price"]; ?> </div></td>
+					<td width='165'><div align='right'><?php echo $data["Price"]; ?> </div></td>
+					<td></td>
 					<td width ='90'> <?php echo "<p align='center'><a class = 'btn' href='addcart.php?item= $data[STT]' >Đặt món</a></p>"; ?></td>
 				
 					</tr>
@@ -109,7 +110,7 @@
 		
 		
 		 <tr>
-            <td colspan="4" height="25"><div class = "menu1" align="center">Món chính</div><td>
+            <td colspan = "5"><div class = "menu1" align="center"><b>Món chính</b></div><td>
          </tr>
 		<?php
 			$sql="select * from menu where value ='2' order by STT desc"; // in món chính
@@ -130,7 +131,8 @@
 					<tr>
 					<td width='51' height='25'><div align='center'><?php echo $dem; ?></div></td>
 					<td width='211'><div align='center'><?php echo $data["Name"]; ?></div></td>
-					<td width='165'><div align='center'><?php echo $data["Price"]; ?> </div></td>
+					<td width='165'><div align='right'><?php echo $data["Price"]; ?> </div></td>
+					<td></td>
 					<td width ='90'> <?php echo "<p align='center'><a class = 'btn' href='addcart.php?item= $data[STT]' >Đặt món</a></p>"; ?></td>
 				
 					</tr>
@@ -141,7 +143,7 @@
 		
 		
 		 <tr>
-            <td colspan="4" height="25"><div class = "menu1" align="center">Đồ uống</div><td>
+            <td colspan = "5"><div class = "menu1" align="center"><b>Đồ uống</b></div><td>
          </tr>
 		<?php
 			$sql="select * from menu where value ='3' order by STT desc"; // in đồ uống vào thực đơn đặt món
@@ -162,7 +164,8 @@
 					<tr>
 					<td width='51' height='25'><div align='center'><?php echo $dem; ?></div></td>
 					<td width='211'><div align='center'><?php echo $data["Name"]; ?></div></td>
-					<td width='165'><div align='center'><?php echo $data["Price"]; ?> </div></td>
+					<td width='165'><div align='right'><?php echo $data["Price"]; ?> </div></td>
+					<td></td>
 					<td width ='90'> <?php echo "<p align='center'><a class = 'btn' href='addcart.php?item= $data[STT]' >Đặt món</a></p>"; ?></td>
 				
 					</tr>
@@ -173,7 +176,7 @@
 
 
 		 <tr>
-			<td colspan="4" height="25"><div class = "menu1" align="center">Món tráng miệng</div><td>
+            <td colspan = "5"><div class = "menu1" align="center"><b>Tráng miệng</b></div><td>
           </tr>
 		<?php
 			$sql="select * from menu where value ='4' order by STT desc"; // in tráng miệng vào thực đơn đặt món
@@ -194,7 +197,8 @@
 					<tr>
 					<td width='51' height='25'><div align='center'><?php echo $dem; ?></div></td>
 					<td width='211'><div align='center'><?php echo $data["Name"]; ?></div></td>
-					<td width='165'><div align='center'><?php echo $data["Price"]; ?> </div></td>
+					<td width='165'><div align='right'><?php echo $data["Price"]; ?> </div></td>
+					<td></td>
 					<td width ='90'> <?php echo "<p align='center'><a class = 'btn' href='addcart.php?item= $data[STT]' >Đặt món</a></p>"; ?></td>
 				
 					</tr>

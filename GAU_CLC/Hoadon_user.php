@@ -39,7 +39,7 @@
                             <th><div align = "center">Tên món</div></th>
                             <th><div align = "center">Đơn Giá</div></th>
 							<th><div align = "center">Số Lượng</div></th>
-							<th><div align = "center">Thành tiền</div></th>
+							<th><div align = "right">Thành tiền</div></th>
 						</tr>
                     </thead>
                     <tbody>
@@ -57,14 +57,14 @@
 						<td width = "350"><div align = "center"><?php echo $data["Name"]; ?></div></td>
 						<td width = "170"><div align = "center"><?php echo $data["Price"]; ?></div></td>
 						<td width = "170"><div align = "center"><?php echo $data["Qty"]; ?></div></td>
-						<td width = "170"><div align = "center"><?php echo $data["Money"]; ?></div></td>
+						<td width = "170"><div align = "right"><?php echo $data["Money"]; ?></div></td>
 					</tr>
 					<?php
 						}
 					?>
 					<tr>
 						<td colspan="4" height="20"><div align="center">Tổng</div></td>
-						<td> <?php echo $tong; ?></td>
+						<td><div align = "right"> <?php echo $tong; ?></div></td>
 					</tr>
 					</tbody>
 				</table>
