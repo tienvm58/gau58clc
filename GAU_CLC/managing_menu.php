@@ -12,6 +12,7 @@
 		
         
         <?php
+			session_start();
 			include 'head_admin.html';
 	
         $connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
