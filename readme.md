@@ -4,6 +4,8 @@
 
 PROJECT CHÍNH ĐƯỢC ĐẶT Ở FORDER "GAU_CLC". 
 
+Đây là 1 phần mềm quản lý nhà hàng. Cho phép khách hàng có thể tương tác với chủ quán mà không cần phải gặp mặt trực tiếp. Giúp cho việc đặt món dễ dàng, thuận tiện và không gây nhầm lẫn.
+
 Các thành viên (5):
 
 1. Phan Anh
