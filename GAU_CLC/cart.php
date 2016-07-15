@@ -56,10 +56,10 @@
 			$item[]=$key;
 		}
 		$str=implode(",",$item);
-		$connect=mysql_connect("localhost","root","") or die("Can not connect database");
-		mysql_select_db("nhahang",$connect);
+		$connect=mysqli_connect("localhost","root","", "nhahang") or die("Can not connect database");
+		mysqli_select_db($connect, "nhahang");
 		$sql="select * from menu where STT in ($str) ";
-		$query=mysql_query($sql);
+		$query=mysqli_query($sql);
 		$total = '';
 		?>
 		<style type="text/css">
@@ -87,7 +87,7 @@
         
 		<?php
 		
-		while($row=mysql_fetch_array($query))
+		while($row=mysqli_fetch_array($query))
 		{
 		
 			
@@ -122,16 +122,16 @@
 			{
 				date_default_timezone_set('Asia/Ho_Chi_Minh');
 				$t = date('d/m/Y H:i:s');
-				$connect=mysql_connect("localhost","root","") or die("Can not connect database");
-				mysql_select_db("nhahang",$connect);
+				$connect=mysqli_connect("localhost","root","", "nhahang") or die("Can not connect database");
+				mysqli_select_db($connect, "nhahang");
 		
 				$sql= "select * from menu where STT in ($str)";
-				$query = mysql_query($sql);
-				while($data = mysql_fetch_array($query))
+				$query = mysqli_query($connect, $sql);
+				while($data = mysqli_fetch_array($query))
 				{		
 					$user = $_SESSION['name'];
 					$add="insert into offer VALUE ('".$t."','".$user."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
-					mysql_query($add);
+					mysqli_query($connect, $add);
 					/*
 					$chinh = $data["Name"];
 					$tien = $_SESSION['cart'][$data["STT"]];
@@ -145,7 +145,7 @@
 					else{
 						*/
 						$mon= "insert into hoadon VALUE ('".$user."','".$data["Name"]."','".$data["Price"]."','".$_SESSION['cart'][$data["STT"]]."','".$_SESSION['cart'][$data["STT"]]*$data["Price"]."')";
-						mysql_query($mon);
+						mysqli_query($connect, $mon);
 					//}
 					
 				}

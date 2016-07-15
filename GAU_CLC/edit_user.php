@@ -49,10 +49,10 @@
 		?>
 	<br>
 	<?php
-		$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
-        mysql_select_db("nhahang",$connection);
+		$connection = mysqli_connect("localhost","root","", "nhahang") or die ("Không thể kết nối đến dữ liệu");
+        mysqli_select_db($connection, "nhahang");
         $sql = "select * from user"; // chon du lieu tu bang user
-        $result = mysql_query($sql);
+        $result = mysqli_query($connection,$sql);
         ?>
         <style type="text/css">
         <!--
@@ -78,7 +78,7 @@
 	
             
 					<?php
-						while($data=mysql_fetch_assoc($result)){
+						while($data=mysqli_fetch_assoc($result)){
 					?>
 					<tr>
 						<td><div align="center"><?php echo $data["name"]; ?></div></td>

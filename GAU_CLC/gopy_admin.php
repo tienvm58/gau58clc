@@ -14,10 +14,10 @@
 		?>
 	
 		<?php
-			$conn=mysql_connect("localhost", "root", "") or die("failed");
-			mysql_select_db("nhahang",$conn);
+			$conn=mysqli_connect("localhost", "root", "", "nhahang") or die("failed");
+			mysqli_select_db($conn, "nhahang");
 			$sql ="select * from gopy order by Time desc";
-			$query=mysql_query($sql);
+			$query=mysqli_query($conn, $sql);
 			header("content-type:text/html;charset=utf-8");
 			//$data= mysql_fetch_assoc($query);
 			echo "<br><br><br>";
@@ -33,7 +33,7 @@
 							echo "</tr>";
 						echo"</thead>";
 						echo"<tbody>";
-							while($data=mysql_fetch_assoc($query)){
+							while($data=mysqli_fetch_assoc($query)){
 							echo "<tr>";
 								echo"<td>".$data["username"]."</td>";
 							echo"<td>".$data["Time"]."</td>";

@@ -21,10 +21,10 @@
         <?php
 			session_start();
 			include 'head_user.html';
-			$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
-			mysql_select_db("nhahang",$connection);
+			$connection = mysqli_connect("localhost","root","", "nhahang") or die ("Không thể kết nối đến dữ liệu");
+			mysqli_select_db($connection, "nhahang");
 			$user = $_SESSION['name'];
-			$sql = "select * from  hoadon where User= '$user' and Qty != 0"; 		$result = mysql_query($sql);
+			$sql = "select * from  hoadon where User= '$user' and Qty != 0"; 		$result = mysqli_query($connection,$sql);
         ?>
  
         <br><br><br><br>
@@ -46,7 +46,7 @@
 					<?php
 						$dem = 0;
 						$tong =0;
-						while($data=mysql_fetch_assoc($result)){
+						while($data=mysqli_fetch_assoc($result)){
 					?>
 					<tr>
 						<?php 
@@ -71,7 +71,7 @@
 			</div>
 		</div>
         <?php
-			mysql_close($connection);
+			mysqli_close($connection);
 			include 'end.html';
 		?>
 	</body>

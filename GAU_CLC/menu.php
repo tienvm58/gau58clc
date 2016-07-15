@@ -29,10 +29,10 @@
 			else {
 				include 'head.html';
 			}
-			$connection = mysql_connect("localhost","root","") or die ("Không thể kết nối đến dữ liệu");
-			mysql_select_db("nhahang",$connection);
+			$connection = mysqli_connect("localhost","root","", "nhahang") or die ("Không thể kết nối đến dữ liệu");
+			mysqli_select_db($connection, "nhahang");
 			$sql = "select * from menu where value ='1'"; // chon du lieu de in mon khai vi
-			$result = mysql_query($sql);
+			$result = mysqli_query($connection,$sql);
         ?>
  
         <br><br><br><br>
@@ -57,7 +57,7 @@
 						</tr>
 						<?php
 							$dem = 0;
-							while($data=mysql_fetch_assoc($result)){
+							while($data=mysqli_fetch_assoc($result)){
 						?>
 						<tr>
 							<?php $dem++; ?>
@@ -74,7 +74,7 @@
 						<?php	
 							//in mon chinh
 							$sql = "select * from menu where value ='2'";
-							$result = mysql_query($sql);
+							$result = mysqli_query($connection, $sql);
 						?>      
 						<tr>
 							<td> </td>
@@ -83,7 +83,7 @@
 						</tr>
 						<?php
 							$dem =0;
-							while($data=mysql_fetch_assoc($result)){
+							while($data=mysqli_fetch_assoc($result)){
 						?>
 						<tr>
 							<?php $dem++; ?>
@@ -100,7 +100,7 @@
 						<?php
 							//in do uong
 							$sql = "select * from menu where value ='3'";
-							$result = mysql_query($sql);
+							$result = mysqli_query($connection, $sql);
 						?>      
 						<tr>
 							<td> </td>
@@ -109,7 +109,7 @@
 						</tr>
 						<?php
 							$dem =0;
-							while($data=mysql_fetch_assoc($result)){
+							while($data=mysqli_fetch_assoc($result)){
 						?>
 						<tr>
 							<?php $dem++; ?>
@@ -125,7 +125,7 @@
 						<?php
 							//in mon trang mieng
 							$sql = "select * from menu where value ='4'";
-							$result = mysql_query($sql);
+							$result = mysqli_query($connection, $sql);
 						?>      
 						<tr>
 							<td> </td>
@@ -134,7 +134,7 @@
 						</tr>
 						<?php
 							$dem =0;
-							while($data=mysql_fetch_assoc($result)){
+							while($data=mysqli_fetch_assoc($result)){
 						?>
 						<tr>	
 							<?php $dem++; ?>
@@ -152,7 +152,8 @@
 		</div>
         
         <?php
-			mysql_close($connection);
+			mysqli_close($connection);
+
 			include 'end.html';
 		?>
 	</body>

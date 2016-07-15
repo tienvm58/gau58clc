@@ -48,10 +48,10 @@
 		
 		<?php
 		
-			$connect=mysql_connect("localhost","root","")or die("Can not connect database");
-			mysql_select_db("nhahang",$connect);
+			$connect=mysqli_connect("localhost","root","", "nhahang")or die("Can not connect database");
+			mysqli_select_db($connect, "nhahang");
 			$sql="select * from menu where value ='1' order by STT desc";
-			$query=mysql_query($sql);
+			$query=mysqli_query($connect, $sql);
 		?>	 
 			 <br><br><br><br>
 			<style type="text/css">
@@ -81,11 +81,11 @@
             </tr>
 		<?php
 			$sql="select * from menu where value ='1' order by STT desc";//in món khai vị
-			$query=mysql_query($sql);
-			if(mysql_num_rows($query) > 0)
+			$query=mysqli_query($connect, $sql);
+			if(mysqli_num_rows($query) > 0)
 			{
 				$dem = 0;
-				while($data=mysql_fetch_array($query))
+				while($data=mysqli_fetch_array($query))
 				{	
 					$dem++;
 					/*
@@ -114,11 +114,11 @@
          </tr>
 		<?php
 			$sql="select * from menu where value ='2' order by STT desc"; // in món chính
-			$query=mysql_query($sql);
-			if(mysql_num_rows($query) > 0)
+			$query=mysqli_query($connect, $sql);
+			if(mysqli_num_rows($query) > 0)
 			{
 				$dem = 0;
-				while($data=mysql_fetch_array($query))
+				while($data=mysqli_fetch_array($query))
 				{	
 					$dem++;
 					/*
@@ -147,11 +147,11 @@
          </tr>
 		<?php
 			$sql="select * from menu where value ='3' order by STT desc"; // in đồ uống vào thực đơn đặt món
-			$query=mysql_query($sql);
-			if(mysql_num_rows($query) > 0)
+			$query=mysqli_query($connect,$sql);
+			if(mysqli_num_rows($query) > 0)
 			{
 				$dem = 0;
-				while($data=mysql_fetch_array($query))
+				while($data=mysqli_fetch_array($query))
 				{	
 					$dem++;
 					/*
@@ -180,11 +180,11 @@
           </tr>
 		<?php
 			$sql="select * from menu where value ='4' order by STT desc"; // in tráng miệng vào thực đơn đặt món
-			$query=mysql_query($sql);
-			if(mysql_num_rows($query) > 0)
+			$query=mysqli_query($connect, $sql);
+			if(mysqli_num_rows($query) > 0)
 			{
 				$dem = 0;
-				while($data=mysql_fetch_array($query))
+				while($data=mysqli_fetch_array($query))
 				{	
 					$dem++;
 					/*
